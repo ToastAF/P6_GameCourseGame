@@ -27,7 +27,7 @@ public class SequencerHandler : MonoBehaviour
 
     void Update()
     {
-        beatText.text = "Current beat: " + beats[beatCounter].number;
+        beatText.text = "Current beat: " + (beats[beatCounter].number + 1); //We show the beat number + 1 because of indexing starting at 0
 
         if(hasCountedUp == false)
         {
@@ -39,6 +39,7 @@ public class SequencerHandler : MonoBehaviour
     {
         hasCountedUp = true;
         beatCounter++;
+        if(beatCounter > howManyBeats - 1) { beatCounter = 0; } //This ensures a looping beat
         yield return new WaitForSeconds(time);
         hasCountedUp = false;
     }
