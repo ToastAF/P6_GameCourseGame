@@ -2,7 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Player1 : MonoBehaviour
+public class Player2 : MonoBehaviour
 {
     public float moveSpeed;
 
@@ -20,7 +20,7 @@ public class Player1 : MonoBehaviour
         rb.AddForce(new Vector3(movementVector.x * moveSpeed * Time.deltaTime, 0, movementVector.y * moveSpeed * Time.deltaTime), ForceMode.Impulse); // Move Player
     }
 
-    public void OnMovePlayer1(InputValue input)
+    public void OnMovePlayer2(InputValue input)
     {
         movementVector = input.Get<Vector2>();
         //transform.position += new Vector3(movementVector.x, 0, movementVector.y);
