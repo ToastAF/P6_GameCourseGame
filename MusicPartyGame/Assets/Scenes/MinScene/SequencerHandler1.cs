@@ -17,6 +17,10 @@ public class SequencerHandler1 : MonoBehaviour
     public List<RawImage> Bot = new List<RawImage>();
     public TextMeshProUGUI beatText;
 
+    public Texture topPicture;
+    public Texture midPicture;
+    public Texture botPicture;
+
     public int howManyBeats;
     int beatCounter;
     bool hasCountedUp;
@@ -29,6 +33,22 @@ public class SequencerHandler1 : MonoBehaviour
         for(int i = 0; i < howManyBeats; i++)
         {
             beats.Add(new Beat1(i));
+        }
+    }
+
+    public void pickUpPickedUp(int level)
+    {
+        if (level == 0)
+        {
+          Top[beats[beatCounter].number].texture = topPicture;
+        }
+        if (level == 1)
+        {
+            Mid[beats[beatCounter].number].texture = midPicture;
+        }
+        if (level == 2)
+        {
+            Bot[beats[beatCounter].number].texture = botPicture;
         }
     }
 

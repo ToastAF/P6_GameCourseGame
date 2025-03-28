@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b89b2224-7784-4f44-bdfd-1145e794840c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MusicPartyGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MusicPartyGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinScene/Player1_2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinScene/Player1_2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinScene/SequencerHandler1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinScene/SequencerHandler1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +78,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1743156986513</updated>
-      <workItem from="1743156995447" duration="2611000" />
+      <workItem from="1743156995447" duration="4414000" />
     </task>
     <servers />
   </component>
