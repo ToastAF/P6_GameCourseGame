@@ -40,5 +40,8 @@ public class PlayerParent : MonoBehaviour
     public void AttackTest() // Test af attack. Måske de skal sidde på hver deres ting, fordi angrebene er forskellige :)
     {
 
+
+        GameObject temp = Instantiate(testAttack, transform.position + new Vector3 (0, 2, 0), Quaternion.identity);
+
     }
 }

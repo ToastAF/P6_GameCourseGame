@@ -12,6 +12,11 @@ public class Player1 : PlayerParent
     void Update()
     {
         MovePlayer();
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            AttackTest();
+        }
     }
 
     public void OnMovePlayer1(InputValue input)
