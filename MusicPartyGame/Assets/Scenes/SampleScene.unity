@@ -896,10 +896,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1051916034}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2acf6ec6853877a468dd765916be086d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5aabf5eead0490d49b2a6b4fedd21fd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 30
+  jumpForce: 5
+  rb: {fileID: 0}
+  movementVector: {x: 0, y: 0}
+  canJump: 0
 --- !u!1 &1119242825
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,7 +965,7 @@ GameObject:
   - component: {fileID: 1302196726}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1069,7 +1073,7 @@ GameObject:
   - component: {fileID: 1944319798}
   - component: {fileID: 1944319797}
   - component: {fileID: 1944319796}
-  - component: {fileID: 1944319795}
+  - component: {fileID: 1944319801}
   - component: {fileID: 1944319794}
   m_Layer: 0
   m_Name: Player 2
@@ -1184,19 +1188,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &1944319795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1944319793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aabf5eead0490d49b2a6b4fedd21fd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 30
 --- !u!54 &1944319796
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1315,6 +1306,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1944319801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944319793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2acf6ec6853877a468dd765916be086d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 30
+  jumpForce: 5
+  rb: {fileID: 0}
+  movementVector: {x: 0, y: 0}
+  canJump: 0
 --- !u!1 &1994651294
 GameObject:
   m_ObjectHideFlags: 0
