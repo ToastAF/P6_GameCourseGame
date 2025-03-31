@@ -25,6 +25,8 @@ public class SequencerHandler1 : MonoBehaviour
     int beatCounter;
     bool hasCountedUp;
     public float time = 0.5f;
+    
+    int previousBeatIndex = -1;
 
     void Start()
     {
@@ -34,6 +36,11 @@ public class SequencerHandler1 : MonoBehaviour
         {
             beats.Add(new Beat1(i));
         }
+        
+        foreach (var img in Top) ApplyGlow(img, false);
+        foreach (var img in Mid) ApplyGlow(img, false);
+        foreach (var img in Bot) ApplyGlow(img, false);
+        
     }
 
     public void pickUpPickedUp(int level)
@@ -51,23 +58,112 @@ public class SequencerHandler1 : MonoBehaviour
             Bot[beats[beatCounter].number].texture = botPicture;
         }
     }
+    
+    void ApplyGlow(RawImage image, bool enable)
+    {
+        if (image == null) return;
+
+        Outline outline = image.GetComponent<Outline>();
+        if (outline != null)
+        {
+            outline.enabled = enable;
+            if (enable) outline.effectColor = Color.yellow;
+        }
+
+        // Check if the image's texture is one of the active pictures
+        if (enable && (image.texture == topPicture || image.texture == midPicture || image.texture == botPicture))
+        {
+            StartCoroutine(AnimateGlow(image));
+        }
+        else
+        {
+            StopCoroutine(AnimateGlow(image));
+            image.transform.localScale = Vector3.one;
+        }
+    }
+    
+    IEnumerator AnimateGlow(RawImage image)
+    {
+        Vector3 originalScale = Vector3.one;
+        Vector3 targetScale = originalScale * 1.1f; // Slight pulse
+
+        float t = 0f;
+        float duration = 0.2f;
+
+        while (t < duration)
+        {
+            t += Time.deltaTime;
+            float scale = Mathf.Lerp(1f, 1.1f, t / duration);
+            image.transform.localScale = new Vector3(scale, scale, 1f);
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(0.1f); // Pause slightly
+
+        // Return to normal
+        t = 0f;
+        while (t < duration)
+        {
+            t += Time.deltaTime;
+            float scale = Mathf.Lerp(1.1f, 1f, t / duration);
+            image.transform.localScale = new Vector3(scale, scale, 1f);
+            yield return null;
+        }
+    }
 
     void Update()
     {
         beatText.text = "Current beat: " + (beats[beatCounter].number + 1) + " (BPM: " + (60/time) + ")"; //We show the beat number + 1 because of indexing starting at 0
 
-        if(hasCountedUp == false)
+        if (!IsInvoking(nameof(AdvanceBeat)))
         {
-            StartCoroutine(CountUp1(time));
+            Invoke(nameof(AdvanceBeat), time);
         }
+
+    }
+    
+    void AdvanceBeat()
+    {
+        StartCoroutine(CountUp1(time));
     }
 
     IEnumerator CountUp1(float time)
     {
         hasCountedUp = true;
+
+        if (previousBeatIndex != -1)
+        {
+            ApplyGlow(Top[beats[previousBeatIndex].number], false);
+            ApplyGlow(Mid[beats[previousBeatIndex].number], false);
+            ApplyGlow(Bot[beats[previousBeatIndex].number], false);
+        }
+        
         beatCounter++;
         if(beatCounter > howManyBeats - 1) { beatCounter = 0; } //This ensures a looping beat
+        
+        ApplyGlow(Top[beats[beatCounter].number], true);
+        ApplyGlow(Mid[beats[beatCounter].number], true);
+        ApplyGlow(Bot[beats[beatCounter].number], true);
+        
+        previousBeatIndex = beatCounter;
+        
         yield return new WaitForSeconds(time);
         hasCountedUp = false;
+        
+        
+        if (Top[beats[beatCounter].number].texture == topPicture)
+        {
+            Debug.Log("Attack 1");
+        }
+        
+        if (Mid[beats[beatCounter].number].texture == midPicture)
+        {
+            Debug.Log("Attack 2");
+        }
+        
+        if (Bot[beats[beatCounter].number].texture == botPicture)
+        {
+            Debug.Log("Attack 3");
+        }
     }
 }

@@ -12,22 +12,28 @@ public class Player1_2 : MonoBehaviour
     Vector2 movementVector;
 
     public SequencerHandler1 sequencerHandler1;
+    public PickUpNotifier pickUpNotifier;
 
     private void OnTriggerEnter(Collider other)
     {
+        PickUpNotifier notifier = other.GetComponent<PickUpNotifier>();
+
         if (other.CompareTag("TopPick"))
         {
             sequencerHandler1.pickUpPickedUp(0);
+            notifier?.OnCollected();
             Destroy(other.gameObject);
         }
-        if (other.CompareTag("MidPick"))
+        else if (other.CompareTag("MidPick"))
         {
             sequencerHandler1.pickUpPickedUp(1);
+            notifier?.OnCollected();
             Destroy(other.gameObject);
         }
-        if (other.CompareTag("BotPick"))
+        else if (other.CompareTag("BotPick"))
         {
             sequencerHandler1.pickUpPickedUp(2);
+            notifier?.OnCollected();
             Destroy(other.gameObject);
         }
     }
