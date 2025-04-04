@@ -5,10 +5,12 @@ using TMPro;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 
 public class SequencerHandler1 : MonoBehaviour
 {
     public GameObject attack1, attack2, attack3, player;
+    public bool isPlayer1; //Den her styrer hvilke attacks der bliver affyret
 
     public AudioSource att1, att2, att3;
 
@@ -29,12 +31,16 @@ public class SequencerHandler1 : MonoBehaviour
     public int howManyBeats;
     public int beatCounter;
     public bool hasCountedUp;
-    public float time = 0.5f;
+
+    public float BPM_input;
+    public float time;
     
     public int previousBeatIndex = -1;
 
     void Start()
     {
+        time = 60 / BPM_input;
+
         att1.volume = 0;
         
         hasCountedUp = false;
@@ -120,7 +126,7 @@ public class SequencerHandler1 : MonoBehaviour
 
     void Update()
     {
-        beatText.text = "Current beat: " + (beats[beatCounter].number + 1) + " (BPM: " + (60/time) + ")"; //We show the beat number + 1 because of indexing starting at 0
+        beatText.text = "Current beat: " + (beats[beatCounter].number + 1) + " (BPM: " + BPM_input + ")"; //We show the beat number + 1 because of indexing starting at 0
 
         if (!IsInvoking(nameof(AdvanceBeat)))
         {
@@ -192,8 +198,17 @@ public class SequencerHandler1 : MonoBehaviour
         else if (isTop)
         {
             Debug.Log("Attack 1");
-            GameObject temp = Instantiate(attack1, new Vector3(player.transform.position.x, player.transform.position.y, 0), Quaternion.Euler(-90, 0, 0));
-            temp.GetComponent<PercussionAttack1>().handler = GetComponent<SequencerHandler1>();
+            if (isPlayer1 == true) // Player1's Attack1
+            {
+                GameObject temp = Instantiate(attack1, new Vector3(player.transform.position.x, 0, player.transform.position.z), Quaternion.Euler(-90, 0, 0));
+                temp.GetComponent<PercussionAttack1>().handler = GetComponent<SequencerHandler1>();
+            }
+            else if(isPlayer1 == false) // Player2's Attack1
+            {
+                GameObject temp = Instantiate(attack1, new Vector3(player.transform.position.x, 0, player.transform.position.z), Quaternion.Euler(-90, 0, 0));
+                temp.GetComponent<SynthAttack1>().handler = GetComponent<SequencerHandler1>();
+            }
+
         }
         else if (isMid)
         {

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7513157164396392489}
   - component: {fileID: 8227159159385393349}
   m_Layer: 0
-  m_Name: attack1
+  m_Name: PercussionAttack1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
