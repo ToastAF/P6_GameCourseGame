@@ -4,9 +4,12 @@ using UnityEngine.UI;
 using TMPro;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 
 public class SequencerHandler1 : MonoBehaviour
 {
+    public GameObject attack1, attack2, attack3, player;
+
     [SerializeField]
     public List<Beat1> beats = new List<Beat1>();
 
@@ -22,11 +25,11 @@ public class SequencerHandler1 : MonoBehaviour
     public Texture botPicture;
 
     public int howManyBeats;
-    int beatCounter;
-    bool hasCountedUp;
+    public int beatCounter;
+    public bool hasCountedUp;
     public float time = 0.5f;
     
-    int previousBeatIndex = -1;
+    public int previousBeatIndex = -1;
 
     void Start()
     {
@@ -175,6 +178,8 @@ public class SequencerHandler1 : MonoBehaviour
         else if (isTop)
         {
             Debug.Log("Attack 1");
+            GameObject temp = Instantiate(attack1, new Vector3(player.transform.position.x, player.transform.position.y, 0), Quaternion.Euler(-90, 0, 0));
+            temp.GetComponent<PercussionAttack1>().handler = GetComponent<SequencerHandler1>();
         }
         else if (isMid)
         {
