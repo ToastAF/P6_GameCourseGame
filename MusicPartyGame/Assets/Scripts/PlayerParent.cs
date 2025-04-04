@@ -1,7 +1,13 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerParent : MonoBehaviour
 {
+    [Header("Health")]
+    public float currentHealth, maxHealth;
+    public RectTransform healthBarUI;
+
+    [Header("Movement")]
     public float moveSpeed, jumpForce;
 
     public Rigidbody rb;
@@ -12,6 +18,18 @@ public class PlayerParent : MonoBehaviour
 
     public GameObject testAttack;
 
+
+    //Initierende metoder :D
+
+    private void Awake()
+    {
+        currentHealth = maxHealth;
+    }
+
+    private void Update()
+    {
+        UpdateHealth();
+    }
 
     //Funktionerne
 
@@ -42,6 +60,11 @@ public class PlayerParent : MonoBehaviour
 
 
         GameObject temp = Instantiate(testAttack, transform.position + new Vector3 (0, 2, 0), Quaternion.identity);
+
+    }
+
+    public void UpdateHealth()
+    {
 
     }
 }
