@@ -10,6 +10,8 @@ public class SequencerHandler1 : MonoBehaviour
 {
     public GameObject attack1, attack2, attack3, player;
 
+    public AudioSource att1, att2, att3;
+
     [SerializeField]
     public List<Beat1> beats = new List<Beat1>();
 
@@ -33,6 +35,8 @@ public class SequencerHandler1 : MonoBehaviour
 
     void Start()
     {
+        att1.volume = 0;
+        
         hasCountedUp = false;
 
         for(int i = 0; i < howManyBeats; i++)
@@ -157,6 +161,16 @@ public class SequencerHandler1 : MonoBehaviour
         bool isTop = Top[beats[beatCounter].number].texture == topPicture;
         bool isMid = Mid[beats[beatCounter].number].texture == midPicture;
         bool isBot = Bot[beats[beatCounter].number].texture == botPicture;
+
+        if (isTop)
+        {
+            att1.volume = 100;
+            
+        }
+        else
+        {
+            att1.volume = 0;
+        }
 
 // Prioritized checks (most complex combos first)
         if (isTop && isMid && isBot)
