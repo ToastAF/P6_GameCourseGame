@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using TMPro;
 
-public class HealthSystem : MonoBehaviour
+public class DamageSystem : MonoBehaviour
 {
 
     public int playerDamageAmount;
