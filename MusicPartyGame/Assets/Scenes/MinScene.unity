@@ -596,6 +596,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2acf6ec6853877a468dd765916be086d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 0
+  maxHealth: 0
+  healthBarUI: {fileID: 0}
   moveSpeed: 30
   jumpForce: 5
   rb: {fileID: 0}
@@ -1242,6 +1245,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aabf5eead0490d49b2a6b4fedd21fd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 0
+  maxHealth: 0
+  healthBarUI: {fileID: 0}
   moveSpeed: 30
   jumpForce: 5
   rb: {fileID: 0}
