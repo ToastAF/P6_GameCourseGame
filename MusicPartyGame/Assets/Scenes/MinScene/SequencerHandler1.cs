@@ -151,19 +151,39 @@ public class SequencerHandler1 : MonoBehaviour
         hasCountedUp = false;
         
         
-        if (Top[beats[beatCounter].number].texture == topPicture)
+        bool isTop = Top[beats[beatCounter].number].texture == topPicture;
+        bool isMid = Mid[beats[beatCounter].number].texture == midPicture;
+        bool isBot = Bot[beats[beatCounter].number].texture == botPicture;
+
+// Prioritized checks (most complex combos first)
+        if (isTop && isMid && isBot)
+        {
+            Debug.Log("ULTIMATE COMBO ATTACK!");
+        }
+        else if (isTop && isBot)
+        {
+            Debug.Log("Combo Attack: Top + Bot");
+        }
+        else if (isTop && isMid)
+        {
+            Debug.Log("Combo Attack: Top + Mid");
+        }
+        else if (isMid && isBot)
+        {
+            Debug.Log("Combo Attack: Mid + Bot");
+        }
+        else if (isTop)
         {
             Debug.Log("Attack 1");
         }
-        
-        if (Mid[beats[beatCounter].number].texture == midPicture)
+        else if (isMid)
         {
             Debug.Log("Attack 2");
         }
-        
-        if (Bot[beats[beatCounter].number].texture == botPicture)
+        else if (isBot)
         {
             Debug.Log("Attack 3");
         }
+
     }
 }
