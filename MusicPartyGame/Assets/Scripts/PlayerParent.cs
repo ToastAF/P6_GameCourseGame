@@ -10,6 +10,8 @@ public class PlayerParent : MonoBehaviour
     [Header("Movement")]
     public float moveSpeed, jumpForce;
 
+    public float xForce, zForce;
+
     public Rigidbody rb;
 
     public Vector2 movementVector;
@@ -28,7 +30,7 @@ public class PlayerParent : MonoBehaviour
 
     private void Update()
     {
-        UpdateHealth();
+
     }
 
     //Funktionerne
@@ -53,18 +55,5 @@ public class PlayerParent : MonoBehaviour
             rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
             canJump = false;
         }
-    }
-
-    public void AttackTest() // Test af attack. Måske de skal sidde på hver deres ting, fordi angrebene er forskellige :)
-    {
-
-
-        GameObject temp = Instantiate(testAttack, transform.position + new Vector3 (0, 2, 0), Quaternion.identity);
-
-    }
-
-    public void UpdateHealth()
-    {
-
     }
 }

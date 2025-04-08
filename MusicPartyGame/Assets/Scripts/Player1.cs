@@ -18,10 +18,8 @@ public class Player1 : PlayerParent
     {
         MovePlayer();
 
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            AttackTest();
-        }
+        xForce = rb.linearVelocity.x;
+        zForce = rb.linearVelocity.z;
     }
 
     public void OnMovePlayer1(InputValue input)

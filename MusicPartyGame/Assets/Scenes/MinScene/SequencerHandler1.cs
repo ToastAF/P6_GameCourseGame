@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
-using System.Collections.Generic;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 
@@ -213,6 +212,17 @@ public class SequencerHandler1 : MonoBehaviour
         else if (isMid)
         {
             Debug.Log("Attack 2");
+            if (isPlayer1 == true) // Player1's Attack2
+            {
+                GameObject temp = Instantiate(attack2, player.transform.position, Quaternion.identity);
+                temp.GetComponent<PercussionAttack2Spawner>().handler = GetComponent<SequencerHandler1>(); // Attack2 her bruger en spawner
+                //temp.GetComponent<PercussionAttack2Spawner>().startPos = player.transform.position;
+            }
+            else if (isPlayer1 == false) // Player2's Attack2
+            {
+                GameObject temp = Instantiate(attack2, player.transform.position, Quaternion.identity);
+                temp.GetComponent<SynthAttack2>().handler = GetComponent<SequencerHandler1>();
+            }
         }
         else if (isBot)
         {
