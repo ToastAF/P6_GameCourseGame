@@ -15,6 +15,8 @@ public class Player2 : PlayerParent
     void Update()
     {
         MovePlayer();
+
+        LookWhereGo();
     }
 
     public void OnMovePlayer2(InputValue input)

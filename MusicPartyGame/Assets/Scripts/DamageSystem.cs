@@ -8,29 +8,24 @@ public class DamageSystem : MonoBehaviour
     public int playerDamageAmount;
     public Rigidbody rb;
     public float forceAmount = 10f;
+    public float knockbackModifier;
     public TextMeshProUGUI playerDamageText;
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         playerDamageAmount = 0;
+        rb = GetComponent<Rigidbody>();
     }
     
-    
-    void addDamage(int damage)
-    {
-        playerDamageAmount+=10;
-    }
-
     private void Update()
     {
-        
         playerDamageText.text = "Player Damage: " + playerDamageAmount;
-        float knockbackModifier = playerDamageAmount * 0.5f;
+        knockbackModifier = playerDamageAmount * 0.5f;
         
         if (Input.GetKeyDown(KeyCode.F))
         {
-            addDamage(10);
+            AddDamage(10);
         }
 
         if (Input.GetKeyDown(KeyCode.G))
@@ -38,5 +33,37 @@ public class DamageSystem : MonoBehaviour
             rb.AddForce(transform.forward * (forceAmount+knockbackModifier), ForceMode.Impulse);
         }
     }
-    
+
+    void AddDamage(int damage)
+    {
+        playerDamageAmount += damage;
+    }
+
+    public void KnockBack(GameObject other, int damage)
+    {
+        AddDamage(damage); // Tilføj skade før man bliver skudt ad h til
+
+        // Retning hen mod projektilet. Under skriver vi minus, fordi man skal flyve den anden retning
+        Vector3 directionVector = new Vector3(other.transform.position.x, 0, other.transform.position.z) - new Vector3(transform.position.x, 0, transform.position.z);
+        rb.AddForce(-directionVector * (forceAmount + knockbackModifier), ForceMode.Impulse);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Attack1"))
+        {
+            KnockBack(other.gameObject, 10);
+        }
+
+        if (other.gameObject.CompareTag("Attack1"))
+        {
+            KnockBack(other.gameObject, 20);
+        }
+
+        if (other.gameObject.CompareTag("Attack1"))
+        {
+            KnockBack(other.gameObject, 30);
+        }
+    }
+
 }

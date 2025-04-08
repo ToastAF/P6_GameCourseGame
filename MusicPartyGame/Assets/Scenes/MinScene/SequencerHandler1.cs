@@ -212,13 +212,14 @@ public class SequencerHandler1 : MonoBehaviour
         else if (isMid)
         {
             Debug.Log("Attack 2");
-            if (isPlayer1 == true) // Player1's Attack2
+            if (isPlayer1 == true) // Player1's Attack2 ~ Percussion
             {
                 GameObject temp = Instantiate(attack2, player.transform.position, Quaternion.identity);
                 temp.GetComponent<PercussionAttack2Spawner>().handler = GetComponent<SequencerHandler1>(); // Attack2 her bruger en spawner
-                //temp.GetComponent<PercussionAttack2Spawner>().startPos = player.transform.position;
+                temp.GetComponent<PercussionAttack2Spawner>().player = player;
+                temp.transform.rotation = player.transform.rotation;
             }
-            else if (isPlayer1 == false) // Player2's Attack2
+            else if (isPlayer1 == false) // Player2's Attack2 ~ Synth
             {
                 GameObject temp = Instantiate(attack2, player.transform.position, Quaternion.identity);
                 temp.GetComponent<SynthAttack2>().handler = GetComponent<SequencerHandler1>();

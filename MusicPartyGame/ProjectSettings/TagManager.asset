@@ -10,6 +10,9 @@ TagManager:
   - BotPick
   - Player1
   - Player2
+  - Attack1
+  - Attack2
+  - Attack3
   layers:
   - Default
   - TransparentFX

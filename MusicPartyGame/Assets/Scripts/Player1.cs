@@ -4,10 +4,10 @@ using UnityEngine.InputSystem;
 
 public class Player1 : PlayerParent
 {
-    
-    
     public SequencerHandler1 sequencerHandler1;
     public PickUpNotifier pickUpNotifier;
+
+    public GameObject attack2Direction;
     
     void Start()
     {
@@ -18,8 +18,12 @@ public class Player1 : PlayerParent
     {
         MovePlayer();
 
-        xForce = rb.linearVelocity.x;
-        zForce = rb.linearVelocity.z;
+        LookWhereGo();
+
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            transform.position = Vector3.MoveTowards(transform.position, Vector3.zero, 1);
+        }
     }
 
     public void OnMovePlayer1(InputValue input)
