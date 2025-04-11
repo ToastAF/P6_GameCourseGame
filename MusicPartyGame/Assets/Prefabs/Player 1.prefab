@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 2692263611686735643}
   - component: {fileID: 8905081064547441538}
   - component: {fileID: 5714085295348135976}
-  - component: {fileID: 7450466439638531301}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,27 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &7450466439638531301
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2497301298150005270}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4621628935709080196
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,7 +102,7 @@ GameObject:
   - component: {fileID: 857749462419507171}
   - component: {fileID: 8989185740479555860}
   - component: {fileID: 462979255022804526}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,9 +241,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aabf5eead0490d49b2a6b4fedd21fd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 0
-  maxHealth: 0
-  healthBarUI: {fileID: 0}
   moveSpeed: 30
   jumpForce: 5
   rotateSpeed: 720
@@ -276,6 +251,7 @@ MonoBehaviour:
   facingVector: {x: 0, y: 0, z: 0}
   canJump: 0
   testAttack: {fileID: 4947167278215625460, guid: 38d919fbea2f414418e186308a9d7ec9, type: 3}
+  damageSystem: {fileID: 8989185740479555860}
   sequencerHandler1: {fileID: 0}
   pickUpNotifier: {fileID: 0}
   attack2Direction: {fileID: 8427419239932339750}
@@ -296,6 +272,7 @@ MonoBehaviour:
   forceAmount: 10
   knockbackModifier: 0
   playerDamageText: {fileID: 0}
+  canBeHit: 0
 --- !u!114 &462979255022804526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -411,7 +388,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6897333029124315077}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Attack2 Direction
   m_TagString: Untagged
   m_Icon: {fileID: 0}

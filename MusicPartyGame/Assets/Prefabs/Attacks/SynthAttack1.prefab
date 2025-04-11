@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8130837131491923689}
   - component: {fileID: 4488063353078229605}
   - component: {fileID: 8177819309474517175}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SynthAttack1
   m_TagString: Attack1
   m_Icon: {fileID: 0}
@@ -151,4 +151,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handler: {fileID: 0}
-  speed: 1.5
+  speed: 2

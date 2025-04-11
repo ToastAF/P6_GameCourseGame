@@ -177,8 +177,8 @@ public class SequencerHandler1 : MonoBehaviour
             att1.volume = 0;
         }
 
-// Prioritized checks (most complex combos first)
-        if (isTop && isMid && isBot)
+// Prioritized checks (most complex combos first)  ~~~~~~~~~~ Det her skal kun bruges hvis vi har tid til det
+       /* if (isTop && isMid && isBot)
         {
             Debug.Log("ULTIMATE COMBO ATTACK!");
         }
@@ -193,8 +193,8 @@ public class SequencerHandler1 : MonoBehaviour
         else if (isMid && isBot)
         {
             Debug.Log("Combo Attack: Mid + Bot");
-        }
-        else if (isTop)
+        }*/
+        if (isTop)
         {
             Debug.Log("Attack 1");
             if (isPlayer1 == true) // Player1's Attack1

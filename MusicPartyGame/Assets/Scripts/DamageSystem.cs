@@ -4,25 +4,31 @@ using TMPro;
 
 public class DamageSystem : MonoBehaviour
 {
-
     public int playerDamageAmount;
     public Rigidbody rb;
     public float forceAmount = 10f;
     public float knockbackModifier;
     public TextMeshProUGUI playerDamageText;
-    
+
+    public bool canBeHit;
+
 
     void Start()
     {
         playerDamageAmount = 0;
         rb = GetComponent<Rigidbody>();
+
+
     }
     
     private void Update()
     {
         playerDamageText.text = "Player Damage: " + playerDamageAmount;
-        knockbackModifier = playerDamageAmount * 0.5f;
-        
+        knockbackModifier = playerDamageAmount * 0.3f; //Scaled down knockback to increase fairness
+
+
+
+        // FOR TESTING!!!
         if (Input.GetKeyDown(KeyCode.F))
         {
             AddDamage(10);
@@ -53,16 +59,19 @@ public class DamageSystem : MonoBehaviour
         if (other.gameObject.CompareTag("Attack1"))
         {
             KnockBack(other.gameObject, 10);
+            Debug.Log("Hit by attack 1");
         }
 
-        if (other.gameObject.CompareTag("Attack1"))
+        if (other.gameObject.CompareTag("Attack2"))
         {
             KnockBack(other.gameObject, 20);
+            Debug.Log("Hit by attack 2");
         }
 
-        if (other.gameObject.CompareTag("Attack1"))
+        if (other.gameObject.CompareTag("Attack3"))
         {
             KnockBack(other.gameObject, 30);
+            Debug.Log("Hit by attack 3");
         }
     }
 

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7513157164396392489}
   - component: {fileID: 8227159159385393349}
   - component: {fileID: 7921040972306816708}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PercussionAttack1
   m_TagString: Attack1
   m_Icon: {fileID: 0}

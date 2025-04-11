@@ -20,10 +20,10 @@ public class Player1 : PlayerParent
 
         LookWhereGo();
 
-        if (Input.GetKeyDown(KeyCode.G))
+        /*if (Input.GetKeyDown(KeyCode.G))
         {
             transform.position = Vector3.MoveTowards(transform.position, Vector3.zero, 1);
-        }
+        }*/
     }
 
     public void OnMovePlayer1(InputValue input)
@@ -33,7 +33,9 @@ public class Player1 : PlayerParent
 
     public void OnJumpPlayer1(InputValue input)
     {
-        Jump();
+        //Jump();
+
+        Dash(); //Vi skifter Jump til Dash
     }
     
     // Sequencer stuff down here

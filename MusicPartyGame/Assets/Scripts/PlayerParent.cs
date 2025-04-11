@@ -1,15 +1,12 @@
+using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerParent : MonoBehaviour
 {
-    [Header("Health")]
-    public float currentHealth, maxHealth;
-    public RectTransform healthBarUI;
-
     [Header("Movement")]
-    public float moveSpeed, jumpForce, rotateSpeed;
+    public float moveSpeed, jumpForce, rotateSpeed, dashSpeed;
 
     public float xForce, zForce;
 
@@ -22,18 +19,8 @@ public class PlayerParent : MonoBehaviour
 
     public GameObject testAttack;
 
+    public DamageSystem damageSystem;
 
-    //Initierende metoder :D
-
-    private void Awake()
-    {
-        currentHealth = maxHealth;
-    }
-
-    private void Update()
-    {
-
-    }
 
     //Funktionerne
 
@@ -73,5 +60,24 @@ public class PlayerParent : MonoBehaviour
             rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
             canJump = false;
         }
+    }
+
+    public void Dash()
+    {
+        facingVector = new Vector3(movementVector.x, 0, movementVector.y);
+        facingVector.Normalize();
+
+        rb.AddForce(facingVector * dashSpeed, ForceMode.Impulse);
+
+        StartCoroutine(IFrames(1));
+    }
+
+    IEnumerator IFrames(float time)
+    {
+        damageSystem.canBeHit = false;
+        Debug.Log("I can't be hit!");
+        yield return new WaitForSeconds(time);
+        damageSystem.canBeHit = true;
+        Debug.Log("Now i can :(");
     }
 }
