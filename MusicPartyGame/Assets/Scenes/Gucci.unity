@@ -349,6 +349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorChangeSpeed: 1
+  minBrightness: 0.5
   spotlight: {fileID: 1245917894}
   lampRenderer: {fileID: 1236282198}
   lampColorProperty: _EmissionColor
@@ -899,6 +900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorChangeSpeed: 1
+  minBrightness: 0.5
   spotlight: {fileID: 2115492335}
   lampRenderer: {fileID: 299967975}
   lampColorProperty: _EmissionColor
@@ -1580,7 +1582,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 634224470}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0436195, y: 0, z: -0.99904823, w: 0}
+  m_LocalRotation: {x: 0.04345351, y: 0.08707292, z: -0.9952465, w: 0.0038016953}
   m_LocalPosition: {x: 5.5, y: 7, z: -3.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1593,7 +1595,7 @@ Transform:
   - {fileID: 1188301772}
   - {fileID: 8204619}
   m_Father: {fileID: 288172048}
-  m_LocalEulerAnglesHint: {x: 180, y: 175, z: 0}
+  m_LocalEulerAnglesHint: {x: 170, y: 175, z: 0}
 --- !u!114 &634224472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1607,6 +1609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorChangeSpeed: 1
+  minBrightness: 0.5
   spotlight: {fileID: 8204621}
   lampRenderer: {fileID: 182883577}
   lampColorProperty: _EmissionColor
@@ -2333,6 +2336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorChangeSpeed: 1
+  minBrightness: 0.5
   spotlight: {fileID: 1684874699}
   lampRenderer: {fileID: 513714635}
   lampColorProperty: _EmissionColor
@@ -2885,6 +2889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorChangeSpeed: 1
+  minBrightness: 0.5
   spotlight: {fileID: 678101671}
   lampRenderer: {fileID: 1631987242}
   lampColorProperty: _EmissionColor
@@ -2911,6 +2916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorChangeSpeed: 1
+  minBrightness: 0.5
   spotlight: {fileID: 1620800712}
   lampRenderer: {fileID: 1185939531}
   lampColorProperty: _EmissionColor
@@ -3151,7 +3157,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1683210237}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.043619502, y: -0, z: 0.99904823, w: 0}
+  m_LocalRotation: {x: 0.043453515, y: -0.087072924, z: 0.9952465, w: 0.0038016955}
   m_LocalPosition: {x: -5.5, y: 7, z: -3.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3164,7 +3170,7 @@ Transform:
   - {fileID: 620865542}
   - {fileID: 461297330}
   m_Father: {fileID: 288172048}
-  m_LocalEulerAnglesHint: {x: 180, y: -175, z: 0}
+  m_LocalEulerAnglesHint: {x: 170, y: -175, z: 0}
 --- !u!114 &1683210239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3178,6 +3184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorChangeSpeed: 1
+  minBrightness: 0.5
   spotlight: {fileID: 461297332}
   lampRenderer: {fileID: 1702984502}
   lampColorProperty: _EmissionColor
