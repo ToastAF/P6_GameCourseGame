@@ -5,14 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b89b2224-7784-4f44-bdfd-1145e794840c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/MinScene/PickUpNotifier.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/MinScene/PickUpNotifier.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MusicPartyGame/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MusicPartyGame/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MusicPartyGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MusicPartyGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinScene/Player1_2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinScene/Player1_2.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinScene/SequencerHandler1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinScene/SequencerHandler1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/BotPick.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/BotPick.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/MidPick.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/MidPick.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PickupBot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PickupBot.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PickupMid.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PickupMid.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PickupTop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PickupTop.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinScene/EnvirontmentPickUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinScene/EnvirontmentPickUp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinScene/PickupLandingDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinScene/PickupLandingDetector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinScene/PickupVisualFX.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinScene/PickupVisualFX.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +23,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/MinScene/EnvirontmentPickUp.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/MinScene/FlightTriggerToggle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/MinScene/PickupLandingDetector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/MinScene/PickupVisualFX.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -48,7 +52,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.33f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\Unityinstalls\6000.0.33f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\Gitkrakenmapper\Gitkraken\P6_GameCourseGame\MusicPartyGame -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\Gitkrakenmapper\Gitkraken\P6_GameCourseGame\MusicPartyGame" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -86,6 +90,11 @@
       <updated>1743156986513</updated>
       <workItem from="1743156995447" duration="4414000" />
       <workItem from="1743405301457" duration="5098000" />
+      <workItem from="1743688840502" duration="1202000" />
+      <workItem from="1743750790561" duration="11368000" />
+      <workItem from="1744114973250" duration="2819000" />
+      <workItem from="1744356973985" duration="7526000" />
+      <workItem from="1744962400829" duration="823000" />
     </task>
     <servers />
   </component>

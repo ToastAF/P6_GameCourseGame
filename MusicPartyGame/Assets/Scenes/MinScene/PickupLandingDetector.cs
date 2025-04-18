@@ -16,6 +16,10 @@ public class PickupLandingDetector : MonoBehaviour
             landed = true;
             Debug.Log("I landed! :)");
             
+            Vector3 pos = transform.position;
+            pos.y = 0.6f;
+            transform.position = pos;
+
             // Stop physics so it stays in place
             Rigidbody rb = GetComponent<Rigidbody>();
             rb.isKinematic = true;

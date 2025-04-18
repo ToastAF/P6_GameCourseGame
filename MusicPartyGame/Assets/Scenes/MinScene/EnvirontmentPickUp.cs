@@ -8,7 +8,8 @@ public class EnvironmentPickUp : MonoBehaviour
 {
     public Transform mapArea;        // Where pickups should ultimately land
     public Transform pickupSpawner;  // The transform from where pickups are "shot"
-    
+    public List<Transform> pickupSpawners;
+
     public GameObject pickupTopPrefab;
     public GameObject pickupMidPrefab;
     public GameObject pickupBotPrefab;
@@ -17,6 +18,12 @@ public class EnvironmentPickUp : MonoBehaviour
     private List<GameObject> currentPickups = new List<GameObject>();
 
     private bool isSpawning = false;
+
+    public SequencerHandler1 sequencehandler;
+
+    private int beatcounterr;
+
+    public Material mat, mat1, mat2;
 
     void Start()
     {
@@ -28,7 +35,66 @@ public class EnvironmentPickUp : MonoBehaviour
 
         // Start auto-spawn manager
         StartCoroutine(AutoSpawnManager());
+        
+        
+
+
     }
+
+    private int _lastBeat = -1;
+
+    private void Update()
+    {
+        int currentBeat = sequencehandler.beats[sequencehandler.beatCounter].number;
+
+        // Only trigger logic if the beat changes from the last known value
+        if (currentBeat != _lastBeat)
+        {
+            Debug.Log(currentBeat);
+            _lastBeat = currentBeat; // Update our local stored beat
+            
+
+            // Now run a coroutine to animate the float from 10 -> 30
+            StartCoroutine(AnimateVertexOffset());
+        }
+    }
+    
+    private IEnumerator AnimateVertexOffset()
+    {
+        float lowValue  = 10f;   // Offset when "idle" (most of the time)
+        float highValue = 20f;   // Peak offset when the beat pulses
+        float totalDuration = 0.3f;
+
+        float elapsed = 0f;
+
+        // We'll animate from low -> high -> low in a single loop
+        while (elapsed < totalDuration)
+        {
+            elapsed += Time.deltaTime;
+            float normalizedTime = Mathf.Clamp01(elapsed / totalDuration);
+
+            // Use a sine wave: 
+            //  - At normalizedTime = 0 → sine = 0
+            //  - At normalizedTime = 0.5 → sine = 1 (peak)
+            //  - At normalizedTime = 1 → sine = 0 again
+            float wave = Mathf.Sin(normalizedTime * Mathf.PI);
+
+            // Lerp from lowValue to highValue based on the sine wave
+            float currentValue = Mathf.Lerp(lowValue, highValue, wave);
+
+            mat.SetFloat("_VertexOffset", currentValue);
+            mat1.SetFloat("_VertexOffset", currentValue);
+            mat2.SetFloat("_VertexOffset", currentValue);
+
+            yield return null;
+        }
+
+        // Ensure it finishes back at the low value
+        mat.SetFloat("_VertexOffset", lowValue);
+        mat1.SetFloat("_VertexOffset", lowValue);
+        mat2.SetFloat("_VertexOffset", lowValue);
+    }
+
 
     public void PickupCollected(GameObject pickup)
     {
@@ -74,8 +140,9 @@ public class EnvironmentPickUp : MonoBehaviour
             return;
 
         // [2] Instantiate
+        int randomNumber = Random.Range(0, pickupSpawners.Count);
         GameObject prefabToSpawn = GetRandomPickupPrefab();
-        GameObject newPickup = Instantiate(prefabToSpawn, pickupSpawner.position, Quaternion.identity, mapArea);
+        GameObject newPickup = Instantiate(prefabToSpawn, pickupSpawners[randomNumber].position, Quaternion.identity, mapArea);
         currentPickups.Add(newPickup);
         
         // Ensure a Rigidbody
@@ -99,7 +166,7 @@ public class EnvironmentPickUp : MonoBehaviour
         rb.isKinematic = false;
 
         // [3] Add or ensure we have a rigidbody, then launch
-        LaunchPickup(newPickup, landPos);
+        LaunchPickup(newPickup, landPos, randomNumber);
 
         // [4] Disable PickupVisualFX so it won't animate while airborne
         PickupVisualFX fx = newPickup.GetComponent<PickupVisualFX>();
@@ -117,7 +184,7 @@ public class EnvironmentPickUp : MonoBehaviour
     }
 
 
-    void LaunchPickup(GameObject pickup, Vector3 landPos)
+    void LaunchPickup(GameObject pickup, Vector3 landPos, int number)
     {
         Rigidbody rb = pickup.GetComponent<Rigidbody>();
         if (rb == null)
@@ -130,7 +197,7 @@ public class EnvironmentPickUp : MonoBehaviour
         // Calculate a ballistic trajectory so that the pickup lands around 'landPos'
         // ----------------------------------------------------------
         float flightTime = 2.0f;  // Adjust to make the pickup fly longer/shorter
-        Vector3 toTarget = landPos - pickupSpawner.position;
+        Vector3 toTarget = landPos - pickupSpawners[number].position;
 
         // We'll separate horizontal vs. vertical components
         Vector3 toTargetXZ = toTarget;
