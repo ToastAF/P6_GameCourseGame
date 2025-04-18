@@ -265,6 +265,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 158265389}
     - target: {fileID: 401794538422640287, guid: 32d11c1122569704882b62d3bf437c97, type: 3}
+      propertyPath: attack3
+      value: 
+      objectReference: {fileID: 881167525953093305, guid: 3130029289a9ead448c20961baa3871a, type: 3}
+    - target: {fileID: 401794538422640287, guid: 32d11c1122569704882b62d3bf437c97, type: 3}
       propertyPath: beatText
       value: 
       objectReference: {fileID: 888118975}
@@ -532,6 +536,75 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &90372840
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2378249450436272898, guid: 56cc5b032e51c1c4691e036e89959650, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361436542446240647, guid: 56cc5b032e51c1c4691e036e89959650, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971950981571293777, guid: 56cc5b032e51c1c4691e036e89959650, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5551010399393507245, guid: 56cc5b032e51c1c4691e036e89959650, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.4815443
+      objectReference: {fileID: 0}
+    - target: {fileID: 5551010399393507245, guid: 56cc5b032e51c1c4691e036e89959650, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 5551010399393507245, guid: 56cc5b032e51c1c4691e036e89959650, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.010185242
+      objectReference: {fileID: 0}
+    - target: {fileID: 5551010399393507245, guid: 56cc5b032e51c1c4691e036e89959650, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5551010399393507245, guid: 56cc5b032e51c1c4691e036e89959650, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5551010399393507245, guid: 56cc5b032e51c1c4691e036e89959650, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5551010399393507245, guid: 56cc5b032e51c1c4691e036e89959650, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5551010399393507245, guid: 56cc5b032e51c1c4691e036e89959650, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5551010399393507245, guid: 56cc5b032e51c1c4691e036e89959650, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5551010399393507245, guid: 56cc5b032e51c1c4691e036e89959650, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731113209864867584, guid: 56cc5b032e51c1c4691e036e89959650, type: 3}
+      propertyPath: m_Name
+      value: RingOfBoyKissing
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 56cc5b032e51c1c4691e036e89959650, type: 3}
 --- !u!1 &107897856 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4621628935709080196, guid: bc180e6df914fa74a89c0c5dff2db9f6, type: 3}
@@ -1237,6 +1310,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 107897856}
     - target: {fileID: 6740069110922710539, guid: 6b8cb1008df9a53439cb669f278bc8af, type: 3}
+      propertyPath: attack3
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6740069110922710539, guid: 6b8cb1008df9a53439cb669f278bc8af, type: 3}
       propertyPath: beatText
       value: 
       objectReference: {fileID: 888118975}
@@ -1850,7 +1927,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 6fcdf885453137746a6f336ed90b9af8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2342,6 +2419,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player2
       objectReference: {fileID: 0}
+    - target: {fileID: 3641938723603170604, guid: 1e1b538e1e5bdee4f9a3d487c5bf350c, type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2427,6 +2508,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 330585543}
+    - target: {fileID: 3145777960466049503, guid: bc180e6df914fa74a89c0c5dff2db9f6, type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 4621628935709080196, guid: bc180e6df914fa74a89c0c5dff2db9f6, type: 3}
       propertyPath: m_Name
       value: Player 1
@@ -2466,3 +2551,4 @@ SceneRoots:
   - {fileID: 636039530}
   - {fileID: 257599042}
   - {fileID: 1423130277}
+  - {fileID: 90372840}

@@ -228,6 +228,11 @@ public class SequencerHandler1 : MonoBehaviour
         else if (isBot)
         {
             Debug.Log("Attack 3");
+
+            if(isPlayer1 == false) // Player2's Attack3 ~ Synth
+            {
+                GameObject temp = Instantiate(attack3, player.transform.position, Quaternion.identity);
+            }
         }
 
     }

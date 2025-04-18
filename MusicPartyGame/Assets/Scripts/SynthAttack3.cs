@@ -15,13 +15,15 @@ public class SynthAttack3 : MonoBehaviour
     void Start()
     {
         m_lifetime = 0;
-        m_direction = transform.right;
-        m_direction.Normalize();
 
         rb = GetComponent<Rigidbody>();
 
         Vector3 target = GameObject.FindGameObjectWithTag("Player1").transform.position;
         Vector3 directionForce = target - transform.position;
+
+        m_direction = directionForce;
+        m_direction.Normalize();
+        
         rb.AddForce(new Vector3(directionForce.x, 0, directionForce.z).normalized * Speed, ForceMode.Impulse);
         StartCoroutine(DestroyObjectAfterDelay(3f));
     }

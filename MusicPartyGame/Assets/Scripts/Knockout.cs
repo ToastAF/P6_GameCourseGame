@@ -8,7 +8,11 @@ public class Knockout : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player1")
+        {
+            EliminatePlayer(other.gameObject);
+        }
+        if (other.gameObject.tag == "Player2")
         {
             EliminatePlayer(other.gameObject);
         }

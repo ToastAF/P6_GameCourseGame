@@ -60,7 +60,7 @@ Material:
     - _QueueOffset: 0
     - _SrcBlend: 5
     - _Surface: 1
-    - _VertexOffset: 16.8541
+    - _VertexOffset: 19.797628
     - _ZTest: 4
     - _ZWrite: 0
     - _ZWriteControl: 0
