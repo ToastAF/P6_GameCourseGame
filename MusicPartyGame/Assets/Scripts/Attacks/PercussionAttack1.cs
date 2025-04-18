@@ -17,20 +17,21 @@ public class PercussionAttack1 : MonoBehaviour
 
     IEnumerator ChangeCD(float time)
     {
-        GameObject temp1 = Instantiate(stage1, transform.position, Quaternion.identity);
+        GameObject temp1 = Instantiate(stage1, transform.position, Quaternion.Euler(-90, 0, 0));
         //Wait before expanding!!!
         yield return new WaitForSeconds(time);
 
         Destroy(temp1);
-        GameObject temp2 = Instantiate(stage2, transform.position, Quaternion.identity);
+        GameObject temp2 = Instantiate(stage2, transform.position, Quaternion.Euler(-90, 0, 0));
         //Debug.Log("Stage UP!");
         yield return new WaitForSeconds(time);
 
         Destroy(temp2);
-        GameObject temp3 = Instantiate(stage3, transform.position, Quaternion.identity);
+        GameObject temp3 = Instantiate(stage3, transform.position, Quaternion.Euler(-90, 0, 0));
         //Debug.Log("Stage UP!");
         yield return new WaitForSeconds(time);
 
         Destroy(temp3);
+        Destroy(gameObject);
     }
 }

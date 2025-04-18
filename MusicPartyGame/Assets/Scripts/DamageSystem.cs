@@ -22,7 +22,7 @@ public class DamageSystem : MonoBehaviour
     
     private void Update()
     {
-        playerDamageText.text = "Player Damage: " + playerDamageAmount;
+        playerDamageText.text = playerDamageAmount + "%";
         knockbackModifier = playerDamageAmount * 0.3f; //Scaled down knockback to increase fairness
 
 

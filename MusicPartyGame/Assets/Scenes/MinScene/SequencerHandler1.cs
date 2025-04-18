@@ -199,7 +199,7 @@ public class SequencerHandler1 : MonoBehaviour
             Debug.Log("Attack 1");
             if (isPlayer1 == true) // Player1's Attack1
             {
-                GameObject temp = Instantiate(attack1, new Vector3(player.transform.position.x, 0, player.transform.position.z), Quaternion.Euler(-90, 0, 0));
+                GameObject temp = Instantiate(attack1, new Vector3(player.transform.position.x, 0, player.transform.position.z), Quaternion.identity);
                 temp.GetComponent<PercussionAttack1>().handler = GetComponent<SequencerHandler1>();
             }
             else if(isPlayer1 == false) // Player2's Attack1
