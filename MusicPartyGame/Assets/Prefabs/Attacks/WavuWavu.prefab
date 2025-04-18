@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3367445881208509770}
   - component: {fileID: 6800147646961777506}
   - component: {fileID: 7459554230342484979}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WavuWavu
   m_TagString: Attack3
   m_Icon: {fileID: 0}

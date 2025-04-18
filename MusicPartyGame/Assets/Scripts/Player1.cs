@@ -20,6 +20,8 @@ public class Player1 : PlayerParent
 
         LookWhereGo();
 
+        LookWherePoint();
+
         /*if (Input.GetKeyDown(KeyCode.G))
         {
             transform.position = Vector3.MoveTowards(transform.position, Vector3.zero, 1);
@@ -29,6 +31,11 @@ public class Player1 : PlayerParent
     public void OnMovePlayer1(InputValue input)
     {
         movementVector = input.Get<Vector2>();
+    }
+
+    public void OnLook(InputValue input)
+    {
+        rightStickVector = input.Get<Vector2>();
     }
 
     public void OnJumpPlayer1(InputValue input)
