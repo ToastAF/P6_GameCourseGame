@@ -243,13 +243,15 @@ MonoBehaviour:
   moveSpeed: 30
   jumpForce: 5
   rotateSpeed: 720
-  xForce: 0
-  zForce: 0
+  dashSpeed: 0
+  dashCoolDown: 0
+  IFrames: 0
+  dashUI: {fileID: 0}
   rb: {fileID: 0}
   movementVector: {x: 0, y: 0}
   facingVector: {x: 0, y: 0, z: 0}
   canJump: 0
-  testAttack: {fileID: 0}
+  canDash: 1
   damageSystem: {fileID: 2710653771362441072}
   sequencerHandler1: {fileID: 0}
   pickUpNotifier: {fileID: 0}
@@ -373,7 +375,7 @@ MonoBehaviour:
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
+  m_DefaultControlScheme: Gamepad
+  m_DefaultActionMap: Player 2
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3785047362037535080}
   - component: {fileID: 2654179811114921139}
   - component: {fileID: 5083066849816603254}
-  - component: {fileID: 8130837131491923689}
   - component: {fileID: 4488063353078229605}
   - component: {fileID: 8177819309474517175}
+  - component: {fileID: 7462287760696620816}
   m_Layer: 8
   m_Name: SynthAttack1
   m_TagString: Attack1
@@ -89,28 +89,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8130837131491923689
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1338930796502252748}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5495902117074765545, guid: 9f78d37c5f2c47e4a988a8678cce808e, type: 3}
 --- !u!54 &4488063353078229605
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -152,3 +130,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handler: {fileID: 0}
   speed: 2
+--- !u!136 &7462287760696620816
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338930796502252748}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.0021333504
+  m_Height: 0.0015
+  m_Direction: 1
+  m_Center: {x: -0.0012925249, y: 0, z: 0}

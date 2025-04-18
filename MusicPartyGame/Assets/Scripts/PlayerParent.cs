@@ -1,14 +1,16 @@
 using System.Collections;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerParent : MonoBehaviour
 {
-    [Header("Movement")]
-    public float moveSpeed, jumpForce, rotateSpeed, dashSpeed;
+    public float moveSpeed, jumpForce, rotateSpeed, dashSpeed, dashCoolDown, IFrames;
 
-    public float xForce, zForce;
+    public GameObject dashUI;
+
+    //public float xForce, zForce;
 
     public Rigidbody rb;
 
@@ -16,8 +18,7 @@ public class PlayerParent : MonoBehaviour
     public Vector3 facingVector;
 
     public bool canJump;
-
-    public GameObject testAttack;
+    public bool canDash = true;
 
     public DamageSystem damageSystem;
 
@@ -39,8 +40,8 @@ public class PlayerParent : MonoBehaviour
 
     public void LookWhereGo()
     {
-        xForce = rb.linearVelocity.x;
-        zForce = rb.linearVelocity.z;
+        //xForce = rb.linearVelocity.x;
+        //zForce = rb.linearVelocity.z;
 
         facingVector = new Vector3(movementVector.x, 0, movementVector.y);
         facingVector.Normalize();
@@ -64,20 +65,33 @@ public class PlayerParent : MonoBehaviour
 
     public void Dash()
     {
-        facingVector = new Vector3(movementVector.x, 0, movementVector.y);
-        facingVector.Normalize();
+        if(rb.linearVelocity.magnitude > 0.5f && canDash == true)
+        {
+            facingVector = new Vector3(movementVector.x, 0, movementVector.y);
+            facingVector.Normalize();
 
-        rb.AddForce(facingVector * dashSpeed, ForceMode.Impulse);
+            rb.AddForce(facingVector * dashSpeed, ForceMode.Impulse);
 
-        StartCoroutine(IFrames(1));
+            StartCoroutine(IFramesCD(IFrames));
+            StartCoroutine(DashCD(dashCoolDown));
+        }
     }
 
-    IEnumerator IFrames(float time)
+    IEnumerator IFramesCD(float time)
     {
         damageSystem.canBeHit = false;
         Debug.Log("I can't be hit!");
         yield return new WaitForSeconds(time);
         damageSystem.canBeHit = true;
         Debug.Log("Now i can :(");
+    }
+
+    IEnumerator DashCD(float time)
+    {
+        canDash = false;
+        dashUI.SetActive(false);
+        yield return new WaitForSeconds(time);
+        canDash = true;
+        dashUI.SetActive(true);
     }
 }

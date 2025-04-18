@@ -26,7 +26,9 @@ public class Player2 : PlayerParent
 
     public void OnJumpPlayer2(InputValue input)
     {
-        Jump();
+        //Jump();
+
+        Dash(); // Vi dasher i stedet for at jumpe
     }
     
     
