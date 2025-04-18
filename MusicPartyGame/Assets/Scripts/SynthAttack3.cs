@@ -21,7 +21,8 @@ public class SynthAttack3 : MonoBehaviour
 
         Vector3 target = GameObject.FindGameObjectWithTag("Player1").transform.position;
         Vector3 directionForce = target - transform.position;
-        rb.AddForce(directionForce.normalized * Speed, ForceMode.Impulse);
+        rb.AddForce(new Vector3(directionForce.x, 0, directionForce.z).normalized * Speed, ForceMode.Impulse);
+        
     }
 
     private void FixedUpdate()

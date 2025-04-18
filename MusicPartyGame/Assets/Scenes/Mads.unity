@@ -2960,6 +2960,7 @@ GameObject:
   - component: {fileID: 1975948461}
   - component: {fileID: 1975948469}
   - component: {fileID: 1975948468}
+  - component: {fileID: 1975948470}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -3249,6 +3250,20 @@ MonoBehaviour:
   forceAmount: 10
   knockbackModifier: 0
   playerDamageText: {fileID: 1791747382}
+--- !u!114 &1975948470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975948460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04c8f38f09d9e724fa48992ba7a8dfa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack1: {fileID: 356530125229279456, guid: 080db0e4ffbaa844db2c50bfceb71abb, type: 3}
+  player: {fileID: 1975948460}
 --- !u!1001 &8477244328726864975
 PrefabInstance:
   m_ObjectHideFlags: 0

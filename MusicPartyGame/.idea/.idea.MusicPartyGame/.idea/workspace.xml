@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="b89b2224-7784-4f44-bdfd-1145e794840c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MusicPartyGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MusicPartyGame/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/Assets/Materials/BotPick.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/BotPick.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/MidPick.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/MidPick.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PickupBot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PickupBot.prefab" afterDir="false" />
@@ -15,6 +17,16 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinScene/EnvirontmentPickUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinScene/EnvirontmentPickUp.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinScene/PickupLandingDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinScene/PickupLandingDetector.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinScene/PickupVisualFX.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinScene/PickupVisualFX.cs" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinScene/Player1_2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinScene/Player1_2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinScene/SequencerHandler1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinScene/SequencerHandler1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+=======
+    <list default="true" id="30a292ae-6a81-4389-8f26-640c68c7d46c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MusicPartyGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MusicPartyGame/.idea/workspace.xml" afterDir="false" />
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,10 +34,33 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+<<<<<<< Updated upstream
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/MinScene/EnvirontmentPickUp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/MinScene/FlightTriggerToggle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/MinScene/PickupLandingDetector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/MinScene/PickupVisualFX.cs" root0="FORCE_HIGHLIGHTING" />
+=======
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HealthSystem.cs" root0="FORCE_HIGHLIGHTING" />
+>>>>>>> Stashed changes
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -38,15 +73,25 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+<<<<<<< Updated upstream
     &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+=======
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+>>>>>>> Stashed changes
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+<<<<<<< Updated upstream
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.CppConfiguration&quot;,
+=======
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+>>>>>>> Stashed changes
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -87,14 +132,23 @@
       <created>1743156986513</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<< Updated upstream
       <updated>1743156986513</updated>
       <workItem from="1743156995447" duration="4414000" />
       <workItem from="1743405301457" duration="5098000" />
+<<<<<<< Updated upstream
       <workItem from="1743688840502" duration="1202000" />
       <workItem from="1743750790561" duration="11368000" />
       <workItem from="1744114973250" duration="2819000" />
       <workItem from="1744356973985" duration="7526000" />
       <workItem from="1744962400829" duration="823000" />
+=======
+=======
+      <updated>1743152868995</updated>
+      <workItem from="1743152871630" duration="8000" />
+      <workItem from="1743153445522" duration="4015000" />
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
