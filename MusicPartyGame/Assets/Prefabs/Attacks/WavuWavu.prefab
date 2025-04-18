@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Frequency: 10
-  Amplitude: 2
+  Amplitude: 1
   Speed: 4
 --- !u!54 &6800147646961777506
 Rigidbody:

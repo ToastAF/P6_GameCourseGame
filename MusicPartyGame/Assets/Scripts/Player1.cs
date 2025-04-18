@@ -7,7 +7,7 @@ public class Player1 : PlayerParent
     public SequencerHandler1 sequencerHandler1;
     public PickUpNotifier pickUpNotifier;
 
-    public GameObject attack2Direction;
+    public GameObject attackDirection;
     
     void Start()
     {
@@ -18,9 +18,14 @@ public class Player1 : PlayerParent
     {
         MovePlayer();
 
-        LookWhereGo();
-
-        LookWherePoint();
+        if(rightStickVector.magnitude >= 0.5f)
+        {
+            LookWherePoint();
+        }
+        else
+        {
+            LookWhereGo();
+        }
 
         /*if (Input.GetKeyDown(KeyCode.G))
         {

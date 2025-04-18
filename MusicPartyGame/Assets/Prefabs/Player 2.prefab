@@ -226,7 +226,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &1042858883207789235
 MonoBehaviour:
@@ -249,7 +249,9 @@ MonoBehaviour:
   dashUI: {fileID: 0}
   rb: {fileID: 0}
   movementVector: {x: 0, y: 0}
+  rightStickVector: {x: 0, y: 0}
   facingVector: {x: 0, y: 0, z: 0}
+  facingOverride: 0
   canJump: 0
   canDash: 1
   damageSystem: {fileID: 2710653771362441072}

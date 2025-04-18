@@ -18,6 +18,8 @@ public class PlayerParent : MonoBehaviour
     public Vector2 rightStickVector;
     public Vector3 facingVector;
 
+    public bool facingOverride;
+
     public bool canJump;
     public bool canDash = true;
 
@@ -94,10 +96,10 @@ public class PlayerParent : MonoBehaviour
     IEnumerator IFramesCD(float time)
     {
         damageSystem.canBeHit = false;
-        Debug.Log("I can't be hit!");
+        //Debug.Log("I can't be hit!");
         yield return new WaitForSeconds(time);
         damageSystem.canBeHit = true;
-        Debug.Log("Now i can :(");
+        //Debug.Log("Now i can :(");
     }
 
     IEnumerator DashCD(float time)

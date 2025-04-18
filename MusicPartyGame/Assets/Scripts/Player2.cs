@@ -16,12 +16,33 @@ public class Player2 : PlayerParent
     {
         MovePlayer();
 
-        LookWhereGo();
+        if (facingOverride == true)
+        {
+            LookWherePoint();
+        }
+        else
+        {
+            LookWhereGo();
+        }
+
+        if (rightStickVector.magnitude >= 0.5f)
+        {
+            facingOverride = true;
+        }
+        else
+        {
+            facingOverride = false;
+        }
     }
 
     public void OnMovePlayer2(InputValue input)
     {
         movementVector = input.Get<Vector2>();
+    }
+
+    public void OnLook(InputValue input)
+    {
+        rightStickVector = input.Get<Vector2>();
     }
 
     public void OnJumpPlayer2(InputValue input)

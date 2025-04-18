@@ -19,7 +19,7 @@ public class PercussionAttack2Spawner : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player2").transform.position; // Vi finder den anden player
         playerScript = player.GetComponent<Player1>();
 
-        transform.position = Vector3.MoveTowards(transform.position, playerScript.attack2Direction.transform.position, step);
+        transform.position = Vector3.MoveTowards(transform.position, playerScript.attackDirection.transform.position, step);
 
         GameObject temp = Instantiate(attack2, transform.position, Quaternion.identity);
         temp.GetComponent<PercussionAttack2>().handler = handler;
