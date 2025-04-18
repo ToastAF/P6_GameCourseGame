@@ -7,6 +7,8 @@ public class PercussionAttack1 : MonoBehaviour
 
     float changeTime;
 
+    public GameObject stage1, stage2, stage3;
+
     private void Start()
     {
         changeTime = handler.time;
@@ -15,17 +17,20 @@ public class PercussionAttack1 : MonoBehaviour
 
     IEnumerator ChangeCD(float time)
     {
+        GameObject temp1 = Instantiate(stage1, transform.position, Quaternion.identity);
         //Wait before expanding!!!
         yield return new WaitForSeconds(time);
 
-        transform.localScale = transform.localScale * 2;
+        Destroy(temp1);
+        GameObject temp2 = Instantiate(stage2, transform.position, Quaternion.identity);
         //Debug.Log("Stage UP!");
         yield return new WaitForSeconds(time);
 
-        transform.localScale = transform.localScale * 1.5f;
+        Destroy(temp2);
+        GameObject temp3 = Instantiate(stage3, transform.position, Quaternion.identity);
         //Debug.Log("Stage UP!");
         yield return new WaitForSeconds(time);
 
-        Destroy(gameObject);
+        Destroy(temp3);
     }
 }

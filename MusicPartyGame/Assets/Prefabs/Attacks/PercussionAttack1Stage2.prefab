@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 5485722414086171624}
   - component: {fileID: 382893502674715806}
   - component: {fileID: 7513157164396392489}
-  - component: {fileID: 8227159159385393349}
   - component: {fileID: 7921040972306816708}
   m_Layer: 7
-  m_Name: PercussionAttack1
+  m_Name: PercussionAttack1Stage2
   m_TagString: Attack1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -1.886, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 300, y: 300, z: 300}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -88,19 +87,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8227159159385393349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 356530125229279456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af2edb553750a2347a8ae144c41ea616, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  handler: {fileID: 0}
 --- !u!136 &7921040972306816708
 CapsuleCollider:
   m_ObjectHideFlags: 0
