@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class SynthAttack3 : MonoBehaviour
@@ -22,7 +23,7 @@ public class SynthAttack3 : MonoBehaviour
         Vector3 target = GameObject.FindGameObjectWithTag("Player1").transform.position;
         Vector3 directionForce = target - transform.position;
         rb.AddForce(new Vector3(directionForce.x, 0, directionForce.z).normalized * Speed, ForceMode.Impulse);
-        
+        StartCoroutine(DestroyObjectAfterDelay(3f));
     }
 
     private void FixedUpdate()
@@ -37,4 +38,12 @@ public class SynthAttack3 : MonoBehaviour
         float up_speed = Mathf.Cos(_time * _frequency) * _amplitude * _frequency;
         return up * up_speed + _forward * _speed;
     }
+    
+    IEnumerator DestroyObjectAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Destroy(gameObject);
+    }
+    
+    
 }
