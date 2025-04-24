@@ -22,15 +22,6 @@ public class Player1 : PlayerParent
         {
             LookWherePoint();
         }
-        else
-        {
-            LookWhereGo();
-        }
-
-        /*if (Input.GetKeyDown(KeyCode.G))
-        {
-            transform.position = Vector3.MoveTowards(transform.position, Vector3.zero, 1);
-        }*/
     }
 
     public void OnMovePlayer1(InputValue input)

@@ -6,6 +6,8 @@ public class Player2 : PlayerParent
 {
     public SequencerHandler1 sequencerHandler1;
     public PickUpNotifier pickUpNotifier;
+
+    public GameObject attackDirection;
     
     void Start()
     {
@@ -16,22 +18,9 @@ public class Player2 : PlayerParent
     {
         MovePlayer();
 
-        if (facingOverride == true)
-        {
-            LookWherePoint();
-        }
-        else
-        {
-            LookWhereGo();
-        }
-
         if (rightStickVector.magnitude >= 0.5f)
         {
-            facingOverride = true;
-        }
-        else
-        {
-            facingOverride = false;
+            LookWherePoint();
         }
     }
 

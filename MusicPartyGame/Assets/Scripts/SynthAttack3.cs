@@ -4,7 +4,9 @@ using UnityEngine;
 public class SynthAttack3 : MonoBehaviour
 {
     private Rigidbody rb;
-    
+    public GameObject player;
+    Player2 playerScript;
+
     public float Frequency = 2;
     public float Amplitude = 2;
     public float Speed = 1;
@@ -17,8 +19,9 @@ public class SynthAttack3 : MonoBehaviour
         m_lifetime = 0;
 
         rb = GetComponent<Rigidbody>();
+        playerScript = player.GetComponent<Player2>();
 
-        Vector3 target = GameObject.FindGameObjectWithTag("Player1").transform.position;
+        Vector3 target = playerScript.attackDirection.transform.position;
         Vector3 directionForce = target - transform.position;
 
         m_direction = directionForce;

@@ -18,10 +18,9 @@ public class PlayerParent : MonoBehaviour
     public Vector2 rightStickVector;
     public Vector3 facingVector;
 
-    public bool facingOverride;
-
     public bool canJump;
     public bool canDash = true;
+    public bool isDead;
 
     public DamageSystem damageSystem;
 

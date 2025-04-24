@@ -4,6 +4,8 @@ using UnityEngine;
 public class SynthAttack1 : MonoBehaviour
 {
     public SequencerHandler1 handler;
+    public GameObject player;
+    Player2 playerScript;
 
     Rigidbody rb;
 
@@ -13,7 +15,9 @@ public class SynthAttack1 : MonoBehaviour
 
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player1").transform.position; // Vi finder den anden player
+        playerScript = player.GetComponent<Player2>();
+
+        target = playerScript.attackDirection.transform.position; // Vi finder den anden player
         transform.LookAt(new Vector3(target.x, 0, target.z));
         transform.Rotate(new Vector3(-90, 0, -90)); // Roterer game objectet fordi den vender mærkeligt
 

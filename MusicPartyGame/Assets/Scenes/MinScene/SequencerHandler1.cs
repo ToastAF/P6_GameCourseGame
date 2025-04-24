@@ -206,6 +206,7 @@ public class SequencerHandler1 : MonoBehaviour
             {
                 GameObject temp = Instantiate(attack1, new Vector3(player.transform.position.x, 0, player.transform.position.z), Quaternion.Euler(-90, 0, 0));
                 temp.GetComponent<SynthAttack1>().handler = GetComponent<SequencerHandler1>();
+                temp.GetComponent<SynthAttack1>().player = player;
             }
 
         }
@@ -223,6 +224,8 @@ public class SequencerHandler1 : MonoBehaviour
             {
                 GameObject temp = Instantiate(attack2, player.transform.position, Quaternion.identity);
                 temp.GetComponent<SynthAttack2>().handler = GetComponent<SequencerHandler1>();
+                temp.GetComponent<SynthAttack2>().player = player;
+
             }
         }
         else if (isBot)
@@ -236,6 +239,7 @@ public class SequencerHandler1 : MonoBehaviour
             else if(isPlayer1 == false) // Player2's Attack3 ~ Synth
             {
                 GameObject temp = Instantiate(attack3, player.transform.position, Quaternion.identity);
+                temp.GetComponent<SynthAttack3>().player = player;
             }
         }
 

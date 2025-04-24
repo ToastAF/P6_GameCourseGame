@@ -7,7 +7,7 @@ public class DamageSystem : MonoBehaviour
 {
     public int playerDamageAmount;
     public Rigidbody rb;
-    public float forceAmount = 10f;
+    public float forceAmount = 5f;
     public float knockbackModifier;
     public TextMeshProUGUI playerDamageText;
 
@@ -23,7 +23,7 @@ public class DamageSystem : MonoBehaviour
     private void Update()
     {
         playerDamageText.text = playerDamageAmount + "%";
-        knockbackModifier = playerDamageAmount * 0.3f; //Scaled down knockback to increase fairness
+        knockbackModifier = playerDamageAmount * 0.2f; //Scaled down knockback to increase fairness
 
 
 
@@ -50,6 +50,7 @@ public class DamageSystem : MonoBehaviour
 
         // Retning hen mod projektilet. Under skriver vi minus, fordi man skal flyve den anden retning
         Vector3 directionVector = new Vector3(other.transform.position.x, 0, other.transform.position.z) - new Vector3(transform.position.x, 0, transform.position.z);
+        directionVector.Normalize();
         rb.AddForce(-directionVector * (forceAmount + knockbackModifier), ForceMode.Impulse);
 
         StartCoroutine(IFramesOnHit(0.2f));
