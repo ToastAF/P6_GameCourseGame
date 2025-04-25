@@ -50,7 +50,7 @@ public class EnvironmentPickUp : MonoBehaviour
         // Only trigger logic if the beat changes from the last known value
         if (currentBeat != _lastBeat)
         {
-            Debug.Log(currentBeat);
+            //Debug.Log(currentBeat);
             _lastBeat = currentBeat; // Update our local stored beat
             
 

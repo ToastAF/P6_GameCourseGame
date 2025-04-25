@@ -22,6 +22,11 @@ public class Player1 : PlayerParent
         {
             LookWherePoint();
         }
+
+        if(movementVector.magnitude >= 0.5f)
+        {
+            LookWhereGo();
+        }
     }
 
     public void OnMovePlayer1(InputValue input)

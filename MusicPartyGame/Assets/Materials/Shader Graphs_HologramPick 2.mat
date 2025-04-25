@@ -60,7 +60,19 @@ Material:
     - _QueueOffset: 0
     - _SrcBlend: 5
     - _Surface: 1
+<<<<<<< Updated upstream
     - _VertexOffset: 17.113222
+=======
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+    - _VertexOffset: 19.337725
+=======
+    - _VertexOffset: 19.984692
+>>>>>>> Stashed changes
+=======
+    - _VertexOffset: 10
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
     - _ZTest: 4
     - _ZWrite: 0
     - _ZWriteControl: 0

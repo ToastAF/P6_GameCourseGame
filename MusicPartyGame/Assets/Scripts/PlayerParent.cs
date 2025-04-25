@@ -24,6 +24,8 @@ public class PlayerParent : MonoBehaviour
 
     public DamageSystem damageSystem;
 
+    public GameObject lookPointer;
+
 
     //Funktionerne
 
@@ -43,13 +45,12 @@ public class PlayerParent : MonoBehaviour
     public void LookWherePoint()
     {
         facingVector = new Vector3(rightStickVector.x, 0, rightStickVector.y);
-        facingVector.Normalize();
 
         if (facingVector.magnitude >= 0.5f)
         {
-            Quaternion toRotation = Quaternion.LookRotation(facingVector, Vector3.up);
+            lookPointer.transform.rotation = Quaternion.LookRotation(facingVector, Vector3.up);
 
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotateSpeed * Time.deltaTime);
+            //lookPointer.transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotateSpeed * Time.deltaTime);
         }
     }
 
