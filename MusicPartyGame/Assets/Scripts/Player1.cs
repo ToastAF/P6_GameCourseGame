@@ -8,7 +8,9 @@ public class Player1 : PlayerParent
     public PickUpNotifier pickUpNotifier;
 
     public GameObject attackDirection;
-    
+
+    public AudioClip dash;
+    public soundAttack dashSound;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -44,6 +46,10 @@ public class Player1 : PlayerParent
         //Jump();
 
         Dash(); //Vi skifter Jump til Dash
+        if (canDash)
+        {
+            dashSound.PlaySound(dash, rb.transform.position);   
+        }
     }
     
     // Sequencer stuff down here

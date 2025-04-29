@@ -8,6 +8,8 @@ public class Player2 : PlayerParent
     public PickUpNotifier pickUpNotifier;
 
     public GameObject attackDirection;
+    public AudioClip dash;
+    public soundAttack dashSound;
     
     void Start()
     {
@@ -42,8 +44,11 @@ public class Player2 : PlayerParent
     public void OnJumpPlayer2(InputValue input)
     {
         //Jump();
-
         Dash(); // Vi dasher i stedet for at jumpe
+        if (canDash)
+        {
+         dashSound.PlaySound(dash, rb.transform.position);   
+        }
     }
     
     

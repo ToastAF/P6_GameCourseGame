@@ -22,6 +22,7 @@ public class StartScreenSongSelect : MonoBehaviour
 
     void OnSongSelected(int index)
     {
+        audioSource.volume = 0.625f;
         if (index >= 0 && index < songs.Length)
         {
             audioSource.clip = songs[index];
@@ -29,6 +30,10 @@ public class StartScreenSongSelect : MonoBehaviour
 
             // Save the selected song for the next scene
             GlobalMusicPicker.selectedSongIndex = index;
+            if (index == 1)
+            {
+                audioSource.volume = 0.4f;
+            }
         }
         else
         {

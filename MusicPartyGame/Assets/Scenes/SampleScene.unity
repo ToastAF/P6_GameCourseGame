@@ -808,11 +808,11 @@ PrefabInstance:
     - target: {fileID: 401794538422640287, guid: 32d11c1122569704882b62d3bf437c97, type: 3}
       propertyPath: att1
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: f5a281c18b2359e4a99ba3b538326ce5, type: 3}
     - target: {fileID: 401794538422640287, guid: 32d11c1122569704882b62d3bf437c97, type: 3}
       propertyPath: att2
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 53d207bf3d4d2cc41a9324f6539ce8be, type: 3}
     - target: {fileID: 401794538422640287, guid: 32d11c1122569704882b62d3bf437c97, type: 3}
       propertyPath: att3
       value: 
@@ -829,6 +829,10 @@ PrefabInstance:
       propertyPath: beatText
       value: 
       objectReference: {fileID: 888118975}
+    - target: {fileID: 401794538422640287, guid: 32d11c1122569704882b62d3bf437c97, type: 3}
+      propertyPath: SoundAttack
+      value: 
+      objectReference: {fileID: 1801658568}
     - target: {fileID: 633372204033197811, guid: 32d11c1122569704882b62d3bf437c97, type: 3}
       propertyPath: m_Name
       value: SequencerHandler 2
@@ -7484,7 +7488,7 @@ PrefabInstance:
     - target: {fileID: 6740069110922710539, guid: 6b8cb1008df9a53439cb669f278bc8af, type: 3}
       propertyPath: att1
       value: 
-      objectReference: {fileID: 8300000, guid: a96f7571c70ee7749985a68cc8042d40, type: 3}
+      objectReference: {fileID: 8300000, guid: 9b94a250723a18a41a9b28e9a891c3f6, type: 3}
     - target: {fileID: 6740069110922710539, guid: 6b8cb1008df9a53439cb669f278bc8af, type: 3}
       propertyPath: att2
       value: 
@@ -25836,6 +25840,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1042858883207789235, guid: 1e1b538e1e5bdee4f9a3d487c5bf350c, type: 3}
+      propertyPath: dash
+      value: 
+      objectReference: {fileID: 8300000, guid: 2b77d42e791802a41a40a9175b8581f3, type: 3}
+    - target: {fileID: 1042858883207789235, guid: 1e1b538e1e5bdee4f9a3d487c5bf350c, type: 3}
       propertyPath: dashUI
       value: 
       objectReference: {fileID: 172307846}
@@ -25843,6 +25851,10 @@ PrefabInstance:
       propertyPath: IFrames
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1042858883207789235, guid: 1e1b538e1e5bdee4f9a3d487c5bf350c, type: 3}
+      propertyPath: dashSound
+      value: 
+      objectReference: {fileID: 1801658568}
     - target: {fileID: 1042858883207789235, guid: 1e1b538e1e5bdee4f9a3d487c5bf350c, type: 3}
       propertyPath: dashSpeed
       value: 5
@@ -25976,6 +25988,10 @@ PrefabInstance:
       value: Gamepad
       objectReference: {fileID: 0}
     - target: {fileID: 857749462419507171, guid: bc180e6df914fa74a89c0c5dff2db9f6, type: 3}
+      propertyPath: dash
+      value: 
+      objectReference: {fileID: 8300000, guid: 2b77d42e791802a41a40a9175b8581f3, type: 3}
+    - target: {fileID: 857749462419507171, guid: bc180e6df914fa74a89c0c5dff2db9f6, type: 3}
       propertyPath: dashUI
       value: 
       objectReference: {fileID: 399730634}
@@ -25983,6 +25999,10 @@ PrefabInstance:
       propertyPath: IFrames
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 857749462419507171, guid: bc180e6df914fa74a89c0c5dff2db9f6, type: 3}
+      propertyPath: dashSound
+      value: 
+      objectReference: {fileID: 1801658568}
     - target: {fileID: 857749462419507171, guid: bc180e6df914fa74a89c0c5dff2db9f6, type: 3}
       propertyPath: dashSpeed
       value: 5
@@ -26299,7 +26319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d1c2ce431f3a314392b4c37df25f1b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  capsulePrefab: {fileID: 1331446997140087435}
+  capsulePrefab: {fileID: 5787762815843462674, guid: a55053a8a7148c54faa0e8ceefcce472, type: 3}
   numberOfCapsules: 1000
   planes:
   - {fileID: 591692596923096439}

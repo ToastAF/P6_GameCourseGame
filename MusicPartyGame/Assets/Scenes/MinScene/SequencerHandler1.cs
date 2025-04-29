@@ -195,13 +195,14 @@ public class SequencerHandler1 : MonoBehaviour
            
             if (isPlayer1 == true) // Player1's Attack1
             {
+                SoundAttack.PlaySound(att1, player.transform.position);
                 GameObject temp = Instantiate(attack1, new Vector3(player.transform.position.x, 0, player.transform.position.z), Quaternion.Euler(-90, 0, 0));
                 temp.GetComponent<PercussionAttack1>().handler = GetComponent<SequencerHandler1>();
-                SoundAttack.PlaySound(att1, player.transform.position);
 
             }
             else if(isPlayer1 == false) // Player2's Attack1
             {
+                SoundAttack.PlaySound(att1, player.transform.position);
                 GameObject temp = Instantiate(attack1, new Vector3(player.transform.position.x, 0, player.transform.position.z), Quaternion.Euler(-90, 0, 0));
                 temp.GetComponent<SynthAttack1>().handler = GetComponent<SequencerHandler1>();
                 temp.GetComponent<SynthAttack1>().player = player;
@@ -217,15 +218,16 @@ public class SequencerHandler1 : MonoBehaviour
             
             if (isPlayer1 == true) // Player1's Attack2 ~ Percussion
             {
+                SoundAttack.PlaySound(att2, player.transform.position);
                 GameObject temp = Instantiate(attack2, player.transform.position, Quaternion.identity);
                 temp.GetComponent<PercussionAttack2Spawner>().handler = GetComponent<SequencerHandler1>(); // Attack2 her bruger en spawner
                 temp.GetComponent<PercussionAttack2Spawner>().player = player;
                 temp.transform.rotation = player.transform.rotation;
-                SoundAttack.PlaySound(att2, player.transform.position);
 
             }
             else if (isPlayer1 == false) // Player2's Attack2 ~ Synth
             {
+                SoundAttack.PlaySound(att2, player.transform.position);
                 GameObject temp = Instantiate(attack2, player.transform.position, Quaternion.identity);
                 temp.GetComponent<SynthAttack2>().handler = GetComponent<SequencerHandler1>();
                 temp.GetComponent<SynthAttack2>().player = player;
@@ -240,14 +242,14 @@ public class SequencerHandler1 : MonoBehaviour
             Debug.Log("Attack 3");
             if (isPlayer1 == true)
             {
+                SoundAttack.PlaySound(att3, player.transform.position);
                 GameObject temp = Instantiate(attack3, player.transform.position, Quaternion.identity);
                 temp.GetComponent<PercussionAttack3>().player = player;
-                
-                SoundAttack.PlaySound(att3, player.transform.position);
 
             }
             else if(isPlayer1 == false) // Player2's Attack3 ~ Synth
             {
+                SoundAttack.PlaySound(att3, player.transform.position);
                 GameObject temp = Instantiate(attack3, player.transform.position, Quaternion.identity);
                 temp.GetComponent<SynthAttack3>().player = player;
                 

@@ -8,11 +8,16 @@ public class SelectingSong : MonoBehaviour
 
     public void StartMusic()
     {
+        audioSource.volume = 0.625f;
         int songIndex = GlobalMusicPicker.selectedSongIndex;
         if (songIndex >= 0 && songIndex < songs.Length)
         {
             audioSource.clip = songs[songIndex];
             audioSource.Play();
+            if (songIndex == 1)
+            {
+                audioSource.volume = 0.4f;
+            }
         }
         else
         {
