@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8832335226818705998}
   - component: {fileID: 3650199307151737618}
   - component: {fileID: -4424090306465456836}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PickupMid
   m_TagString: MidPick
   m_Icon: {fileID: 0}
@@ -185,9 +185,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3858675544178910520, guid: 62abe1f3b8c82b741954bf4a09949651, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -3166404438801923923, guid: 62abe1f3b8c82b741954bf4a09949651, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -2883608572424811287, guid: 62abe1f3b8c82b741954bf4a09949651, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 62abe1f3b8c82b741954bf4a09949651, type: 3}
       propertyPath: m_Name
       value: P6_GameDesign_Note1 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 62abe1f3b8c82b741954bf4a09949651, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660576796345084766, guid: 62abe1f3b8c82b741954bf4a09949651, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
