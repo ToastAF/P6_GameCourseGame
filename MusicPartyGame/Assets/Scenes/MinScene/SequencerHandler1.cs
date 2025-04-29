@@ -11,7 +11,7 @@ public class SequencerHandler1 : MonoBehaviour
     public GameObject attack1, attack2, attack3, player;
     public bool isPlayer1; //Den her styrer hvilke attacks der bliver affyret
 
-    public AudioSource att1, att2, att3;
+    public AudioClip att1, att2, att3;
 
     [SerializeField]
     public List<Beat1> beats = new List<Beat1>();
@@ -36,11 +36,13 @@ public class SequencerHandler1 : MonoBehaviour
     
     public int previousBeatIndex = -1;
 
+    public soundAttack SoundAttack;
+
     void Start()
     {
         time = 60 / BPM_input;
 
-        att1.volume = 0;
+       
         
         hasCountedUp = false;
 
@@ -167,15 +169,8 @@ public class SequencerHandler1 : MonoBehaviour
         bool isMid = Mid[beats[beatCounter].number].texture == midPicture;
         bool isBot = Bot[beats[beatCounter].number].texture == botPicture;
 
-        if (isTop)
-        {
-            att1.volume = 100;
-            
-        }
-        else
-        {
-            att1.volume = 0;
-        }
+        
+        
 
 // Prioritized checks (most complex combos first)  ~~~~~~~~~~ Det her skal kun bruges hvis vi har tid til det
        /* if (isTop && isMid && isBot)
@@ -197,36 +192,48 @@ public class SequencerHandler1 : MonoBehaviour
         if (isTop)
         {
             Debug.Log("Attack 1");
+           
             if (isPlayer1 == true) // Player1's Attack1
             {
                 GameObject temp = Instantiate(attack1, new Vector3(player.transform.position.x, 0, player.transform.position.z), Quaternion.Euler(-90, 0, 0));
                 temp.GetComponent<PercussionAttack1>().handler = GetComponent<SequencerHandler1>();
+                SoundAttack.PlaySound(att1, player.transform.position);
+
             }
             else if(isPlayer1 == false) // Player2's Attack1
             {
                 GameObject temp = Instantiate(attack1, new Vector3(player.transform.position.x, 0, player.transform.position.z), Quaternion.Euler(-90, 0, 0));
                 temp.GetComponent<SynthAttack1>().handler = GetComponent<SequencerHandler1>();
                 temp.GetComponent<SynthAttack1>().player = player;
+                
             }
+            
+
 
         }
         else if (isMid)
         {
             Debug.Log("Attack 2");
+            
             if (isPlayer1 == true) // Player1's Attack2 ~ Percussion
             {
                 GameObject temp = Instantiate(attack2, player.transform.position, Quaternion.identity);
                 temp.GetComponent<PercussionAttack2Spawner>().handler = GetComponent<SequencerHandler1>(); // Attack2 her bruger en spawner
                 temp.GetComponent<PercussionAttack2Spawner>().player = player;
                 temp.transform.rotation = player.transform.rotation;
+                SoundAttack.PlaySound(att2, player.transform.position);
+
             }
             else if (isPlayer1 == false) // Player2's Attack2 ~ Synth
             {
                 GameObject temp = Instantiate(attack2, player.transform.position, Quaternion.identity);
                 temp.GetComponent<SynthAttack2>().handler = GetComponent<SequencerHandler1>();
                 temp.GetComponent<SynthAttack2>().player = player;
+                
 
             }
+            
+
         }
         else if (isBot)
         {
@@ -235,12 +242,18 @@ public class SequencerHandler1 : MonoBehaviour
             {
                 GameObject temp = Instantiate(attack3, player.transform.position, Quaternion.identity);
                 temp.GetComponent<PercussionAttack3>().player = player;
+                
+                SoundAttack.PlaySound(att3, player.transform.position);
+
             }
             else if(isPlayer1 == false) // Player2's Attack3 ~ Synth
             {
                 GameObject temp = Instantiate(attack3, player.transform.position, Quaternion.identity);
                 temp.GetComponent<SynthAttack3>().player = player;
+                
             }
+            
+
         }
 
     }
