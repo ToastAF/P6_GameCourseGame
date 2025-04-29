@@ -1,19 +1,9 @@
 fileFormatVersion: 2
-guid: f46cc15ff72714f44b70646a4a77d83f
+guid: 60c8d09287035c346983d1c14d0e9431
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: mat_drummer_main
-    second: {fileID: 2100000, guid: a03c0e457c06e5c42867b56090815391, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: tex_drummer_main
-    second: {fileID: 2800000, guid: 162baba73d528d14c927717066b9b248, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -107,7 +97,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0

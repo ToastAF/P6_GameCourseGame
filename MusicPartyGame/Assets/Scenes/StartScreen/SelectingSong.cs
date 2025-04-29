@@ -6,7 +6,7 @@ public class SelectingSong : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip[] songs;
 
-    void Start()
+    public void StartMusic()
     {
         int songIndex = GlobalMusicPicker.selectedSongIndex;
         if (songIndex >= 0 && songIndex < songs.Length)
