@@ -133,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handler: {fileID: 0}
   player: {fileID: 0}
-  speed: 2
+  speed: 3
 --- !u!136 &7462287760696620816
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -274,7 +274,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1588990969593478059}
   - component: {fileID: 723414207920533995}
-  - component: {fileID: 6284480730501463491}
   - component: {fileID: 6424386824366112416}
   m_Layer: 0
   m_Name: Cube (1)
@@ -306,27 +305,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3877969832054259590}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &6284480730501463491
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3877969832054259590}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!96 &6424386824366112416
 TrailRenderer:
   serializedVersion: 3
@@ -444,7 +422,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7459449821669035717}
   - component: {fileID: 7926601456807809558}
-  - component: {fileID: 6955722008494506915}
   - component: {fileID: 4168032507142957429}
   m_Layer: 0
   m_Name: Cube
@@ -476,27 +453,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6047952715250082160}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &6955722008494506915
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6047952715250082160}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!96 &4168032507142957429
 TrailRenderer:
   serializedVersion: 3

@@ -10,7 +10,7 @@ public class Player2 : PlayerParent
     public GameObject attackDirection;
     public AudioClip dash;
     public soundAttack dashSound;
-    
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -45,10 +45,6 @@ public class Player2 : PlayerParent
     {
         //Jump();
         Dash(); // Vi dasher i stedet for at jumpe
-        if (canDash)
-        {
-         dashSound.PlaySound(dash, rb.transform.position);   
-        }
     }
     
     

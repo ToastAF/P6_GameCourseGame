@@ -11,16 +11,31 @@ public class Player1 : PlayerParent
 
     public AudioClip dash;
     public soundAttack dashSound;
+
+    Animator animator;
+    public GameObject animObject;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        animator = animObject.GetComponent<Animator>();
     }
 
     void Update()
     {
         MovePlayer();
 
-        if(rightStickVector.magnitude >= 0.5f)
+        if(rb.linearVelocity.magnitude > 0.6f)
+        {
+            animator.SetBool("Running", true);
+        }
+        else
+        {
+            animator.SetBool("Running", false);
+        }
+
+
+        if (rightStickVector.magnitude >= 0.5f)
         {
             LookWherePoint();
         }
@@ -46,10 +61,6 @@ public class Player1 : PlayerParent
         //Jump();
 
         Dash(); //Vi skifter Jump til Dash
-        if (canDash)
-        {
-            dashSound.PlaySound(dash, rb.transform.position);   
-        }
     }
     
     // Sequencer stuff down here

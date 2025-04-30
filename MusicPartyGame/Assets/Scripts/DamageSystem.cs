@@ -5,6 +5,8 @@ using System.Collections;
 
 public class DamageSystem : MonoBehaviour
 {
+    public int att1Dmg, att2Dmg, att3Dmg;
+
     public int playerDamageAmount;
     public Rigidbody rb;
     public float forceAmount = 5f;
@@ -12,6 +14,8 @@ public class DamageSystem : MonoBehaviour
     public TextMeshProUGUI playerDamageText;
 
     public bool canBeHit;
+
+    public Animator animator;
 
 
     void Start()
@@ -62,19 +66,19 @@ public class DamageSystem : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Attack1"))
             {
-                KnockBack(other.gameObject, 10);
+                KnockBack(other.gameObject, att1Dmg);
                 Debug.Log("Hit by attack 1");
             }
 
             if (other.gameObject.CompareTag("Attack2"))
             {
-                KnockBack(other.gameObject, 20);
+                KnockBack(other.gameObject, att2Dmg);
                 Debug.Log("Hit by attack 2");
             }
 
             if (other.gameObject.CompareTag("Attack3"))
             {
-                KnockBack(other.gameObject, 30);
+                KnockBack(other.gameObject, att3Dmg);
                 Debug.Log("Hit by attack 3");
             }
         }
@@ -83,7 +87,9 @@ public class DamageSystem : MonoBehaviour
     IEnumerator IFramesOnHit(float time)
     {
         canBeHit = false;
+        animator.SetBool("KnockedBack", true);
         yield return new WaitForSeconds(time);
         canBeHit = true;
+        animator.SetBool("KnockedBack", false);
     }
 }

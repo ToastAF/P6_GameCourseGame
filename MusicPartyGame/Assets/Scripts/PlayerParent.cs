@@ -40,6 +40,7 @@ public class PlayerParent : MonoBehaviour
     public void MovePlayer() // Den her bliver kaldt på Player1 og Player2 i deres Update() ift deres respektive OnMove() funktioner
     {
         rb.AddForce(new Vector3(movementVector.x * moveSpeed * Time.deltaTime, 0, movementVector.y * moveSpeed * Time.deltaTime), ForceMode.Impulse); // Move Player
+        
     }
 
     public void LookWherePoint()
@@ -87,6 +88,8 @@ public class PlayerParent : MonoBehaviour
             facingVector.Normalize();
 
             rb.AddForce(facingVector * dashSpeed, ForceMode.Impulse);
+
+            GetComponent<AudioSource>().Play();
 
             StartCoroutine(IFramesCD(IFrames));
             StartCoroutine(DashCD(dashCoolDown));

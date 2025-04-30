@@ -212,7 +212,7 @@ public class SequencerHandler1 : MonoBehaviour
 
 
         }
-        else if (isMid)
+        if (isMid)
         {
             Debug.Log("Attack 2");
             
@@ -237,7 +237,7 @@ public class SequencerHandler1 : MonoBehaviour
             
 
         }
-        else if (isBot)
+        if (isBot)
         {
             Debug.Log("Attack 3");
             if (isPlayer1 == true)

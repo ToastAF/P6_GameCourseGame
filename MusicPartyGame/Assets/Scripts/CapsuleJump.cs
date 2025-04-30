@@ -10,6 +10,10 @@ public class CapsuleJump : MonoBehaviour
     void Start()
     {
         startPosition = transform.position;
+
+        GameObject temp = GameObject.FindGameObjectWithTag("Ground");
+        transform.LookAt(temp.transform.position, Vector3.up);
+
         startTime = Random.Range(0f, 2f * Mathf.PI); // Randomize the start time for independent jumping
     }
 
