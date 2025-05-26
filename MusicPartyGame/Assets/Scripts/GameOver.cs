@@ -45,4 +45,9 @@ public class GameOver : MonoBehaviour
     {
         SceneManager.LoadScene("Startscreen");
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
