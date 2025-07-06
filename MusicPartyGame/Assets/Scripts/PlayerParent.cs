@@ -8,7 +8,7 @@ public class PlayerParent : MonoBehaviour
 {
     public float moveSpeed, jumpForce, rotateSpeed, dashSpeed, dashCoolDown, IFrames;
 
-    public GameObject dashUI;
+    public Image dashUI;
 
     //public float xForce, zForce;
 
@@ -37,7 +37,7 @@ public class PlayerParent : MonoBehaviour
         }
     }
 
-    public void MovePlayer() // Den her bliver kaldt på Player1 og Player2 i deres Update() ift deres respektive OnMove() funktioner
+    public void MovePlayer() // Den her bliver kaldt pï¿½ Player1 og Player2 i deres Update() ift deres respektive OnMove() funktioner
     {
         rb.AddForce(new Vector3(movementVector.x * moveSpeed * Time.deltaTime, 0, movementVector.y * moveSpeed * Time.deltaTime), ForceMode.Impulse); // Move Player
         
@@ -71,7 +71,7 @@ public class PlayerParent : MonoBehaviour
         }
     }
 
-    public void Jump() // Den her bliver kaldt på Player1 og Player2 i deres respektive OnJump() funktioner
+    public void Jump() // Den her bliver kaldt pï¿½ Player1 og Player2 i deres respektive OnJump() funktioner
     {
         if(canJump == true)
         {
@@ -108,9 +108,19 @@ public class PlayerParent : MonoBehaviour
     IEnumerator DashCD(float time)
     {
         canDash = false;
-        dashUI.SetActive(false);
-        yield return new WaitForSeconds(time);
+        dashUI.fillAmount = 0f; // Start empty
+        dashUI.color = Color.gray;
+        
+        float elapsed = 0f;
+        while (elapsed < time)
+        {
+            elapsed += Time.deltaTime;
+            dashUI.fillAmount = Mathf.Clamp01(elapsed / time);
+            yield return null;
+        }
+
         canDash = true;
-        dashUI.SetActive(true);
+        dashUI.fillAmount = 1f; // Fully filled
+        dashUI.color = Color.white;
     }
 }
