@@ -5356,7 +5356,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1801658564}
+      - m_Target: {fileID: 1801658569}
         m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
         m_MethodName: RestartGame
         m_Mode: 1
@@ -7259,7 +7259,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1801658564}
+      - m_Target: {fileID: 1801658569}
         m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
         m_MethodName: RestartGame
         m_Mode: 1
@@ -7673,6 +7673,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586388019}
   m_Mesh: {fileID: 8816608819433774603, guid: 2ec067048007dec4d8682bf314759337, type: 3}
+--- !u!114 &590866557 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7516204289575621134, guid: e0f51a69ef301074ca9727774f9b83e2, type: 3}
+  m_PrefabInstance: {fileID: 1857508439575416394}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &593952695
 GameObject:
   m_ObjectHideFlags: 0
@@ -13770,7 +13781,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Player 2 won!!!
+  m_text: Player 1 won!!!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 54bd0571b311d114c95400897a0f879d, type: 2}
   m_sharedMaterial: {fileID: 7100120943305741663, guid: 54bd0571b311d114c95400897a0f879d, type: 2}
@@ -14140,7 +14151,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1801658564}
+      - m_Target: {fileID: 1801658569}
         m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
         m_MethodName: GoToMainMenu
         m_Mode: 1
@@ -19849,7 +19860,7 @@ GameObject:
   - component: {fileID: 1801658563}
   - component: {fileID: 1801658567}
   - component: {fileID: 1801658562}
-  - component: {fileID: 1801658564}
+  - component: {fileID: 1801658569}
   - component: {fileID: 1801658565}
   - component: {fileID: 1801658566}
   - component: {fileID: 1801658568}
@@ -19883,7 +19894,7 @@ MonoBehaviour:
   pickupMidPrefab: {fileID: 162357926902048096, guid: b1599e733b2b40147906034f4d43d34a, type: 3}
   pickupBotPrefab: {fileID: 8034052053628792825, guid: 2269d5e8fb463504a99842ebbf668673, type: 3}
   maxPickups: 6
-  sequencehandler: {fileID: 0}
+  sequencehandler: {fileID: 1152786899}
   mat: {fileID: 2100000, guid: b746a37717c2a0740b06d4269e04c80f, type: 2}
   mat1: {fileID: 2100000, guid: 0649a2faf3bd69b469430a804725a9f1, type: 2}
   mat2: {fileID: 2100000, guid: 74b2279979614d947a9079c5a7b5f11c, type: 2}
@@ -19902,23 +19913,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1801658564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1801658561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20cf7660439adef409380f4c09982776, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEnded: 0
-  player1Won: 0
-  p1WonTxt: {fileID: 2141783180}
-  p2WonTxt: {fileID: 1166444833}
-  restartButton: {fileID: 417822757}
 --- !u!114 &1801658565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19973,6 +19967,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ed1fb91f0b284f4981bf274e645ba63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1801658569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801658561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20cf7660439adef409380f4c09982776, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEnded: 0
+  player1Won: 0
+  p1WonTxt: {fileID: 2141783180}
+  p2WonTxt: {fileID: 1166444833}
+  restartButton: {fileID: 417822757}
 --- !u!1 &1810165646
 GameObject:
   m_ObjectHideFlags: 0
@@ -23601,7 +23612,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1801658564}
+      - m_Target: {fileID: 1801658569}
         m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
         m_MethodName: GoToMainMenu
         m_Mode: 1
@@ -24551,7 +24562,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Player 1 won!!!
+  m_text: Player 2 won!!!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 54bd0571b311d114c95400897a0f879d, type: 2}
   m_sharedMaterial: {fileID: 7100120943305741663, guid: 54bd0571b311d114c95400897a0f879d, type: 2}
@@ -24716,6 +24727,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2142768263}
   m_Mesh: {fileID: 5054146545194114522, guid: 5ae4597ecc9be24458e5f57c2dafccb4, type: 3}
+--- !u!114 &2143151733 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6116602200771960800, guid: fae93a88024734e4898ad3c8dfffcd8e, type: 3}
+  m_PrefabInstance: {fileID: 126851083}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &512179207905899388
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -24903,6 +24925,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 888118975}
     - target: {fileID: 735067891094131160, guid: e0f51a69ef301074ca9727774f9b83e2, type: 3}
+      propertyPath: isPlayer1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 735067891094131160, guid: e0f51a69ef301074ca9727774f9b83e2, type: 3}
       propertyPath: SoundAttack
       value: 
       objectReference: {fileID: 1801658568}
@@ -25056,7 +25082,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1: {fileID: 107897856}
   player2: {fileID: 158265389}
-  gameOverScript: {fileID: 1801658564}
+  gameOverScript: {fileID: 1801658569}
   outerRing: {fileID: 4096789713358171079}
 --- !u!65 &3764478284791301383
 BoxCollider:
@@ -25308,7 +25334,7 @@ PrefabInstance:
     - target: {fileID: 2710653771362441072, guid: 1e1b538e1e5bdee4f9a3d487c5bf350c, type: 3}
       propertyPath: playerDamageText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 590866557}
     - target: {fileID: 3331371541704777731, guid: 1e1b538e1e5bdee4f9a3d487c5bf350c, type: 3}
       propertyPath: m_Name
       value: Player 2
@@ -25457,6 +25483,26 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player1
       objectReference: {fileID: 0}
+    - target: {fileID: 6897333029124315077, guid: bc180e6df914fa74a89c0c5dff2db9f6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6897333029124315077, guid: bc180e6df914fa74a89c0c5dff2db9f6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6897333029124315077, guid: bc180e6df914fa74a89c0c5dff2db9f6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6897333029124315077, guid: bc180e6df914fa74a89c0c5dff2db9f6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6897333029124315077, guid: bc180e6df914fa74a89c0c5dff2db9f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8989185740479555860, guid: bc180e6df914fa74a89c0c5dff2db9f6, type: 3}
       propertyPath: att1Dmg
       value: 35
@@ -25480,7 +25526,7 @@ PrefabInstance:
     - target: {fileID: 8989185740479555860, guid: bc180e6df914fa74a89c0c5dff2db9f6, type: 3}
       propertyPath: playerDamageText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2143151733}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
